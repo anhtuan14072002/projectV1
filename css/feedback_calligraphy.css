@@ -1,0 +1,36 @@
+.feedback_calligraphy {
+    text-align: center;
+    font-weight: 500;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.slideshow-container {
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.slideshow-content {
+    display: flex;
+    animation: scroll 10s linear infinite;
+}
+
+.feedback_calligraphy_detail {
+    display: inline-block;
+    margin: 20px;
+}
+
+.feedback_calligraphy_detail img {
+    width: 300px;
+    height: 200px;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}

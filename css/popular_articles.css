@@ -1,24 +1,26 @@
-.latest_articles{
+.popular_articles{
     width: 1200px;
     margin: 0 auto;
 }
-.latest_articles h5{
+.popular_articles h5{
     margin: 30px 10px;
     text-align: center;
 }
-.articles{
+.popular{
     width: 300px;
+    margin: 20px;
 }
-.articles img{
+.popular img{
     width: 300px;
     height: 150px;
     border-radius: 5px;
 }
-.lastest_detail{
+.popular_detail{
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
-.articles a{
+.popular a{
     text-decoration: none;
     color: black;
 }

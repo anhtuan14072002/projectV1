@@ -1,4 +1,7 @@
-
+*{
+    font-family: 'Tenor Sans', sans-serif;
+    box-sizing: border-box;
+}
 .header {
     background-image: url(/images/img_headerr.jpg);
     background-size: cover;
