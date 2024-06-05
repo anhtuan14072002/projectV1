@@ -1,5 +1,5 @@
 <div class="popular_articles">
-    <h5>Check out the most popular articles</h5>   
+    <h2>Check out the most popular articles</h2>   
     <div class="popular_detail">
         <div class="popular">
             <a href=""><img src="/images/popular_articles.jpg"/>

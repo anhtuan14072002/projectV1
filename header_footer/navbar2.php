@@ -14,6 +14,12 @@
             </ul>
         </li>
         <li class="header_li"><a href="contact.php"><b>Contact</b></a></li>
+        <li class="header_li">
+            <div class="search-bar">
+                <i class="bi bi-search"></i>
+                <input class="search-bar-hh" type="text" placeholder="Search for assets">
+            </div>
+        </li>
       </ul>
       <ul>
         <li class="header_li"><a href="#"><b>Favorite</b></a></li>
@@ -21,10 +27,17 @@
         <li class="header_li signup"><a href="#"><b>Sign up</b></a></li>
       </ul>
     </div>
-    <div class="main-heading">Search for the calligraphy you want</div>
-    <div class="sub-heading">Images, galleries, videos, calligraphy from basic to detailed</div>
-    <div class="search-bar">
-      <input type="text" placeholder="Search for assets">
-      <button><i class="bi bi-search"></i></button>
-    </div>
+    
 </div>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+    var searchInput = document.getElementById("searchInput");
+    searchInput.addEventListener("keydown", function(event) {
+        if (event.key === "Enter") {
+            var searchTerm = searchInput.value;
+            console.log("Searching for:", searchTerm);
+        }
+    });
+});
+
+</script>

@@ -1,0 +1,18 @@
+.learn{
+    width: 1200px;
+    margin: 0 auto;
+    font-size: 22px;
+    padding-top: 30px;
+}
+.learn h1{
+    font-weight:800;
+}
+.learn h2{
+    font-weight:800;
+}
+.info_calligraphy img {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    height: auto;
+}

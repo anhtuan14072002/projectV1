@@ -1,5 +1,5 @@
 <div class="latest_articles">
-    <h5>Here are the latest articles</h5>   
+    <h2>Here are the latest articles</h2>   
     <div class="lastest_detail">
         <div class="articles">
             <a href=""><img src="/images/latest_articles.jpg"/>
