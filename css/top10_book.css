@@ -1,0 +1,56 @@
+.top10_book {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.top10_book h4 {
+    margin-top: 20px;
+}
+
+.swiper-container {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    width: 220px;
+    margin: 10px; 
+}
+
+.top10_card_book {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.top10_card_book img {
+    width: 250px;
+    height: 130px;
+    border-radius: 10px;
+    filter: brightness(70%);
+    
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.top10_card_book:hover img {
+    transform: scale(1.1); 
+    filter: brightness(50%);
+}
+
+.text-overlay {
+    position: absolute;
+    top: 50px;
+    left: 30px;
+    color: #fafafa;
+    text-align: center;
+    font-size: 18px; 
+    z-index: 1;
+    
+}
+
+.swiper-button-next, .swiper-button-prev {
+    color: #000; 
+}

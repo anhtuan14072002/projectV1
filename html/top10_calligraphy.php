@@ -1,0 +1,66 @@
+<div class="top10_calligraphy">
+        <h4>TOP 10 Calligraphy Styles For Beginners</h4>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide top10_card_calligraphy">
+                    <a href=""><img src="/images/Copperplate_calligraphy.jpg"  /></a>
+                    <div class="text-overlay">Copperplate calligraphy</div>
+                </div>
+                <div class="swiper-slide top10_card_calligraphy">
+                    <a href=""><img src="/images/Copperplate_calligraphy.jpg"  /></a>
+                    <div class="text-overlay">Copperplate calligraphy</div>
+                </div>
+                <div class="swiper-slide top10_card_calligraphy">
+                    <a href=""><img src="/images/Copperplate_calligraphy.jpg"  /></a>
+                    <div class="text-overlay">Copperplate calligraphy</div>
+                </div>
+                <div class="swiper-slide top10_card_calligraphy">
+                    <a href=""><img src="/images/Copperplate_calligraphy.jpg"  /></a>
+                    <div class="text-overlay">Copperplate calligraphy</div>
+                </div>
+                <div class="swiper-slide top10_card_calligraphy">
+                    <a href=""><img src="/images/Copperplate_calligraphy.jpg"  /></a>
+                    <div class="text-overlay">Copperplate calligraphy</div>
+                </div>
+                <div class="swiper-slide top10_card_calligraphy">
+                    <a href=""><img src="/images/Copperplate_calligraphy.jpg"  /></a>
+                    <div class="text-overlay">Copperplate calligraphy</div>
+                </div>
+                <div class="swiper-slide top10_card_calligraphy">
+                    <a href=""><img src="/images/Copperplate_calligraphy.jpg"  /></a>
+                    <div class="text-overlay">Copperplate calligraphy</div>
+                </div>
+                <div class="swiper-slide top10_card_calligraphy">
+                    <a href=""><img src="/images/Copperplate_calligraphy.jpg"  /></a>
+                    <div class="text-overlay">Copperplate calligraphy</div>
+                </div>
+                <div class="swiper-slide top10_card_calligraphy">
+                    <a href=""><img src="/images/Copperplate_calligraphy.jpg"  /></a>
+                    <div class="text-overlay">Copperplate calligraphy</div>
+                </div>
+                <div class="swiper-slide top10_card_calligraphy">
+                    <a href=""><img src="/images/Copperplate_calligraphy.jpg"  /></a>
+                    <div class="text-overlay">Copperplate calligraphy</div>
+                </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 5,
+            spaceBetween: 20,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
