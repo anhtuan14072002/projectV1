@@ -1,6 +1,7 @@
 <div class="feedback_calligraphy2">
     <div class="slideshow-container2">
         <div class="slideshow-content2">
+            <!-- chèn ảnh có đầu fb -->
             <div class="feedback_calligraphy_detail2">
                 <a href="">
                     <img src="/images/latest_articles.jpg" alt="">

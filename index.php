@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="css/popular_articles.css">
     <link rel="stylesheet" href="css/feedback_calligraphy.css">
     <link rel="stylesheet" href="css/feedback_calligraphy2.css">
-
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <title>Home</title>
     <?php include_once("styles/styles.php")?>

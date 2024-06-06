@@ -14,6 +14,7 @@
             <p>Improve your existing skills by implementing nifty and experience-based tips!</p>
         </div>
         <div class="card_all">
+            <!-- lấy ảnh và description tại sql, ảnh bắt đầu bằng li -->
             <div class="card_library">
                 <div class="card">
                     <img src="/images/li_calligraphy101.png" class="card-img-top" alt="...">
@@ -21,6 +22,7 @@
                         <h5 class="card-title" style="font-weight:800;">Card title</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                         <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <button class="button_heart"><i class="bi bi-star"></i></button>
                     </div>
                 </div>
             </div>
@@ -31,6 +33,8 @@
                         <h5 class="card-title" style="font-weight:800;">Card title</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                         <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <button class="button_heart"><i class="bi bi-star"></i></button>
+
                     </div>
                 </div>
             </div>
@@ -41,6 +45,8 @@
                         <h5 class="card-title" style="font-weight:800;">Card title</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                         <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <button class="button_heart"><i class="bi bi-star"></i></button>
+
                     </div>
                 </div>
             </div>
@@ -51,6 +57,7 @@
                         <h5 class="card-title" style="font-weight:800;">Card title</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                         <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <button class="button_heart"><i class="bi bi-star"></i></button>
                     </div>
                 </div>
             </div>
@@ -61,6 +68,8 @@
                         <h5 class="card-title" style="font-weight:800;">Card title</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                         <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <button class="button_heart"><i class="bi bi-star"></i></button>
+
                     </div>
                 </div>
             </div>
@@ -71,6 +80,8 @@
                         <h5 class="card-title" style="font-weight:800;">Card title</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                         <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <button class="button_heart"><i class="bi bi-star"></i></button>
+
                     </div>
                 </div>
             </div>

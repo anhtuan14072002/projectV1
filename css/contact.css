@@ -1,0 +1,14 @@
+.center_contact{
+    width: 1200px;
+    margin: 0 auto;
+}
+.all_contact{
+    display: flex;
+    justify-content: space-between;
+}
+.form_contact{
+    padding-top: 20px;
+}
+.form_about_title{
+    padding-top: 70px;
+}

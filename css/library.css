@@ -33,6 +33,13 @@
 .card_library{
     padding-bottom: 20px;
 }
+.card_library .button_heart{
+    position: relative;
+    top:5px;
+    background-color: #ffffff;
+    border: #ffffff;
+    font-size: 30px;
+}
 .card_library .card{
     width: 300px;
     height: 500px;

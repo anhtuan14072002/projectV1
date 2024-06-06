@@ -2,6 +2,7 @@
     <h2>Posts left by students</h2>
     <h6>Articles by people who have learned calligraphy from this site</h6>
     <div class="slideshow-container">
+        <!-- chèn ảnh có đầu fb -->
         <div class="slideshow-content">
             <div class="feedback_calligraphy_detail">
                 <a href="">
