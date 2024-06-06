@@ -1,0 +1,42 @@
+.library{
+    width: 1200px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-between;
+}
+.articles_library{
+    width: 700px;
+    border-right: 2px solid #ecdada;
+    padding-right: 50px;
+    overflow: hidden;
+}
+.video_library{
+    width: 400px;
+    margin-right: 50px;
+}
+.detail_library h2{
+    font-weight: 800;
+}
+.detail_library h4{
+    font-weight: 800;
+}
+.detail_library p{
+    padding-bottom: 20px;
+    border-bottom: 3px solid #ecdada;
+    font-size: 22px;
+}
+.card_all{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.card_library{
+    padding-bottom: 20px;
+}
+.card_library .card{
+    width: 300px;
+    height: 500px;
+}
+.video_hot{
+    padding-bottom: 20px;
+}
