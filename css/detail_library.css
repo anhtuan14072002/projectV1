@@ -1,0 +1,24 @@
+.calligraphy_101{
+    width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+    overflow: hidden;
+}
+.calligraphy_101_1 img{
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    height: auto;
+}
+.calligraphy_101_1{
+    border-bottom: 3px solid #ddd;
+}
+.calligraphy_101_2{
+    padding: 20px 0;
+}
+.calligraphy_101_2 img{
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    height: auto;
+}
