@@ -44,7 +44,13 @@
                     <li>Indian calligraphy</li>
                 </ul>
                 <img src="/images/li_calligraphy101_1.png" alt="">
-
+                <p><i><b>Note:</b> Despite the art of beautiful writing being present in many cultures across the globe, I focus primarily on studying, practicing, and teaching Western calligraphy and the Latin alphabet. </i></p>
+                <br>
+                <h4>What are some key features of calligraphy?</h4>
+                <p>It’s important to distinguish between handwriting (including cursive) and calligraphy.</p>
+                
+                <p>It is common for the untrained eye to see these two as the same.</p>
+                <p>With that in mind, here are a few key features of calligraphy. </p>
             </div>
 
         </div>
