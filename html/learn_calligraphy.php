@@ -1,7 +1,9 @@
 <div class="learn">
     <div class="info_calligraphy">
         <h1>Introduction to Calligraphy</h1>
-        <br>
+        <div class="backlearn">
+            <img src="/images/learn2.jpeg" alt="Eastern Calligraphy">
+        </div>
         <p>
         Calligraphy, the art of beautiful writing, is a timeless practice that has captivated cultures across the globe for centuries. It encompasses a wide range of styles, techniques, and cultural influences, each contributing to its rich and diverse tapestry.
         In exploring the world of calligraphy, one encounters three prominent traditions: Eastern, Western, and Arabic. Each tradition has its own unique characteristics, history, and significance, reflecting the cultural nuances and artistic sensibilities of its respective region.
