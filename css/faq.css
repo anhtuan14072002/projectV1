@@ -1,0 +1,48 @@
+.faq_ft{
+    width: 1200px;
+    margin: 0 auto;
+}
+.faq_ft_title h2{
+    text-align: center;
+    padding: 20px;
+}
+.faq_ft{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.faq h2 {
+    text-align: center;
+    padding-bottom: 30px;
+}
+.faq2 h2 {
+    text-align: center;
+    padding-bottom: 30px;
+}
+.deatail_faq {
+    overflow: hidden;
+    justify-content: space-between;
+    padding-top: 30px;
+}
+.li_faq {
+    width: 550px;
+    margin: 10px 0;
+    border: 1px solid #c1c1c1;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.faq_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+}
+.faq_header p {
+    margin: 0;
+}
+.sub_faq {
+    display: none;
+    padding: 10px;
+    transition: max-height 0.3s ease-out;
+}

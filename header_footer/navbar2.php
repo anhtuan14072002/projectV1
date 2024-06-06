@@ -8,9 +8,9 @@
         <li class="header_li"><a href="library.php"><b>Library</b></a></li>
         <li class="header_li submenu_parent"><a href="#"><b>Calligraphy</b></a>
             <ul class="submenu">
-                <li><a href="calligraphy_western.php">Western</a></li>
-                <li><a href="calligraphy_arabic.php">Arabic</a></li>
-                <li><a href="calligraphy_oriental.php">Oriental</a></li>   
+                <li><a href="/western.php">Western</a></li>
+                <li><a href="/arabic.php">Arabic</a></li>
+                <li><a href="/oriental.php">Oriental</a></li>   
             </ul>
         </li>
         <li class="header_li"><a href="contact.php"><b>Contact</b></a></li>
