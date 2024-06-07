@@ -9,7 +9,6 @@
         <p><a href="/about.php"><i class="bi bi-chevron-right"></i><b>About</b></a></p>
         <p><a href="/learn.php"><i class="bi bi-chevron-right"></i><b>Learn</b></a></p>
         <p><a href="/library.php"><i class="bi bi-chevron-right"></i><b>Library</b></a></p>
-        <p><a href="/feedback.php"><i class="bi bi-chevron-right"></i><b>Feedback</b></a></p>
     </div>
     <div class="foot contact_footer">
         <h6>CONTACT</h6>
@@ -26,9 +25,8 @@
         </p>
         <div class="support_contact">
             <h6>SUPPORT</h6>
-            <p><a href=""><i class="bi bi-chevron-right"></i><b>FAQ</b></a></p>
-            <p><a href=""><i class="bi bi-chevron-right"></i><b>Search guide</b></a></p>
-            <p><a href=""><i class="bi bi-chevron-right"></i><b>Contact</b></a></p>
+            <p><a href="/faq.php"><i class="bi bi-chevron-right"></i><b>FAQ</b></a></p>
+            <p><a href="/contact.php"><i class="bi bi-chevron-right"></i><b>Contact</b></a></p>
         </div>
     </div>
     <div class="link_footer">
