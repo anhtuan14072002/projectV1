@@ -3,72 +3,78 @@
         <div class="slideshow-content2">
             <!-- chèn ảnh có đầu fb -->
             <div class="feedback_calligraphy_detail2">
-                <a href="">
+                <div class="feedback_calligraphy_detail" onclick="openImageInfoBox('/images/latest_articles.jpg')">
                     <img src="/images/latest_articles.jpg" alt="">
-                </a>
+                </div>
             </div>
             <div class="feedback_calligraphy_detail2">
-                <a href="">
+                <div class="feedback_calligraphy_detail" onclick="openImageInfoBox('/images/latest_articles.jpg')">
                     <img src="/images/latest_articles.jpg" alt="">
-                </a>
+                </div>
             </div>
             <div class="feedback_calligraphy_detail2">
-                <a href="">
+                <div class="feedback_calligraphy_detail" onclick="openImageInfoBox('/images/latest_articles.jpg')">
                     <img src="/images/latest_articles.jpg" alt="">
-                </a>
+                </div>
             </div>
             <div class="feedback_calligraphy_detail2">
-                <a href="">
+                <div class="feedback_calligraphy_detail" onclick="openImageInfoBox('/images/latest_articles.jpg')">
                     <img src="/images/latest_articles.jpg" alt="">
-                </a>
+                </div>
             </div>
             <div class="feedback_calligraphy_detail2">
-                <a href="">
+                <div class="feedback_calligraphy_detail" onclick="openImageInfoBox('/images/latest_articles.jpg')">
                     <img src="/images/latest_articles.jpg" alt="">
-                </a>
+                </div>
             </div>
             <div class="feedback_calligraphy_detail2">
-                <a href="">
+                <div class="feedback_calligraphy_detail" onclick="openImageInfoBox('/images/latest_articles.jpg')">
                     <img src="/images/latest_articles.jpg" alt="">
-                </a>
+                </div>
             </div>
             <div class="feedback_calligraphy_detail2">
-                <a href="">
+                <div class="feedback_calligraphy_detail" onclick="openImageInfoBox('/images/latest_articles.jpg')">
                     <img src="/images/latest_articles.jpg" alt="">
-                </a>
+                </div>
             </div>
             <div class="feedback_calligraphy_detail2">
-                <a href="">
+                <div class="feedback_calligraphy_detail" onclick="openImageInfoBox('/images/latest_articles.jpg')">
                     <img src="/images/latest_articles.jpg" alt="">
-                </a>
+                </div>
             </div>
             <div class="feedback_calligraphy_detail2">
-                <a href="">
+                <div class="feedback_calligraphy_detail" onclick="openImageInfoBox('/images/latest_articles.jpg')">
                     <img src="/images/latest_articles.jpg" alt="">
-                </a>
+                </div>
             </div>
             <div class="feedback_calligraphy_detail2">
-                <a href="">
+                <div class="feedback_calligraphy_detail" onclick="openImageInfoBox('/images/latest_articles.jpg')">
                     <img src="/images/latest_articles.jpg" alt="">
-                </a>
+                </div>
             </div>
             <div class="feedback_calligraphy_detail2">
-                <a href="">
+                <div class="feedback_calligraphy_detail" onclick="openImageInfoBox('/images/latest_articles.jpg')">
                     <img src="/images/latest_articles.jpg" alt="">
-                </a>
+                </div>
             </div>
             <div class="feedback_calligraphy_detail2">
-                <a href="">
+                <div class="feedback_calligraphy_detail" onclick="openImageInfoBox('/images/latest_articles.jpg')">
                     <img src="/images/latest_articles.jpg" alt="">
-                </a>
+                </div>
             </div>
             <div class="feedback_calligraphy_detail2">
-                <a href="">
+                <div class="feedback_calligraphy_detail" onclick="openImageInfoBox('/images/latest_articles.jpg')">
                     <img src="/images/latest_articles.jpg" alt="">
-                </a>
+                </div>
             </div>
         </div>
     </div>
+</div>
+<!-- Overlay and image info box -->
+<div id="overlay" onclick="closeImageInfoBox()"></div>
+<div id="image-info-box">
+    <span class="close" onclick="closeImageInfoBox()"><i class="bi bi-x-lg"></i></span>
+    <img id="info-box-img" src="" alt="">
 </div>
 <script>
     document.addEventListener('DOMContentLoaded', () => {
@@ -94,4 +100,34 @@
 
         updateAnimationSpeed(speed);
     });
+    // Mở khung thông tin và làm mờ nền
+    function openImageInfoBox(imgSrc) {
+        var overlay = document.getElementById('overlay');
+        var infoBox = document.getElementById('image-info-box');
+        var infoBoxImg = document.getElementById('info-box-img');
+
+        // Thiết lập thông tin ảnh
+        infoBoxImg.src = imgSrc;
+
+        // Hiển thị overlay và khung thông tin
+        overlay.style.display = 'block';
+        infoBox.style.display = 'block';
+
+        // Làm mờ nền
+        // document.body.style.overflow = 'hidden'; // Ngăn trượt nền khi mở khung thông tin
+    }
+
+    // Đóng khung thông tin và loại bỏ mờ nền
+    function closeImageInfoBox() {
+        var overlay = document.getElementById('overlay');
+        var infoBox = document.getElementById('image-info-box');
+
+        // Ẩn overlay và khung thông tin
+        overlay.style.display = 'none';
+        infoBox.style.display = 'none';
+
+        // Loại bỏ mờ nền
+        // document.body.style.overflow = ''; // Cho phép trượt nền khi đóng khung thông tin
+    }
+
 </script>
