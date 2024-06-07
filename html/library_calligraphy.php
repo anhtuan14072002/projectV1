@@ -56,7 +56,7 @@
                     <div class="card-body">
                         <h5 class="card-title" style="font-weight:800;">Card title</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <a href="/type_anatomy.php" class="btn btn-primary">Go somewhere</a>
                         <button class="button_heart"><i class="bi bi-star"></i></button>
                     </div>
                 </div>
