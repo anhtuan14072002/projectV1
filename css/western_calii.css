@@ -1,0 +1,17 @@
+.calli_all{
+    width: 1200px;
+    margin:0 auto;
+    overflow: hidden;
+}
+.calli_card img{
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    height: auto;
+}
+iframe{
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    
+}
