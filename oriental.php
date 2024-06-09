@@ -14,7 +14,7 @@
         <?php include_once("header_footer/navbar2.php")?>
     </div>
     <div class="containerr">
-        <?php include_once("html/about_calligraphy.php")?>
+        <?php include_once("html/orental_calligraphy.php")?>
     </div>
     <div class="footer">
         <?php include_once("header_footer/footer.php")?>
