@@ -20,37 +20,24 @@
             <!-- lấy ảnh và description tại sql, ảnh bắt đầu bằng li -->
             <div class="card_library">
                 <div class="card">
-                    <img src="/images/li_calligraphy101.png" class="card-img-top" alt="...">
+                    <img src="images\HowToImprove.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title" style="font-weight:800;">Card title</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of
                             the card's content.</p>
-                        <a href="/calligraphy_101.php" class="btn btn-primary">Go somewhere</a>
+                        <a href="how_to_improve_handwriting.php" class="btn btn-primary">Go somewhere</a>
                         <button class="button_heart"><i class="bi bi-star"></i></button>
                     </div>
                 </div>
             </div>
             <div class="card_library">
                 <div class="card">
-                    <img src="/images/li_calligraphy101.png" class="card-img-top" alt="...">
+                    <img src="images\6EssentialCalligraphy.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title" style="font-weight:800;">Card title</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of
                             the card's content.</p>
-                        <a href="/ealligraphy_effectively.php" class="btn btn-primary">Go somewhere</a>
-                        <button class="button_heart"><i class="bi bi-star"></i></button>
-
-                    </div>
-                </div>
-            </div>
-            <div class="card_library">
-                <div class="card">
-                    <img src="/images/li_calligraphy101.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title" style="font-weight:800;">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
-                        <a href="/10_Calligraphy_styles.php" class="btn btn-primary">Go somewhere</a>
+                        <a href="6_Essential.php" class="btn btn-primary">Go somewhere</a>
                         <button class="button_heart"><i class="bi bi-star"></i></button>
 
                     </div>
@@ -58,12 +45,24 @@
             </div>
             <div class="card_library">
                 <div class="card">
-                    <img src="/images/li_calligraphy101.png" class="card-img-top" alt="...">
+                    <img src="images\BrushCalligraphyAlphabet.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title" style="font-weight:800;">Card title</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of
                             the card's content.</p>
-                        <a href="/type_anatomy.php" class="btn btn-primary">Go somewhere</a>
+                        <a href="brushcalligraphy.php" class="btn btn-primary">Go somewhere</a>
+                        <button class="button_heart"><i class="bi bi-star"></i></button>
+
+                    </div>
+                </div>
+            </div>
+            <div class="card_library">
+                <div class="card">
+                    <img src="images\BasicCalligraphy.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title" style="font-weight:800;">Card title</h5>
+                        <p class="card-text">The Basic Calligraphy Strokes Guide (+FREE Worksheets)</p>
+                        <a href="basiccalligraphy.php" class="btn btn-primary">Go somewhere</a>
                         <button class="button_heart"><i class="bi bi-star"></i></button>
                     </div>
                 </div>
