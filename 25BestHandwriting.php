@@ -122,6 +122,17 @@
 
                 <h3>9. Brachetto – Traditional Script Font</h3>
                 <img src="images\25BestHandwriting9.jpg" alt="">
+                <p>This cursive handwriting font is created by adding a modern and elegant touch to the traditional script style. Brachetto Font set includes contextual alternates, stylistic alternates, standard ligatures, and terminal forms. So have fun with the countless options.</p>
+                <h3>10. Corinthiago – Modern Signature Style Font</h3>
+                <img src="images\25BestHandwriting10.jpg" alt="">
+                <p>Coninthiago is a simple yet elegant handwriting font that is just irresistible. This stylish homage to classic calligraphy script uses varying baselines, gorgeous glyphs, and stunning alternates to create a handwriting font that is simply charming and engaging.</p>
+                <h4>Corinthiago offers several additions to the base font – </h4>
+                <ul>
+                    <li>Titling alternates</li>
+                    <li>Swash alternates</li>
+                    <li>Stylistic alternates</li>
+                    <li>Ligature and stylistic set</li>
+                </ul>
             </div>
         </div>
         <p></p>
