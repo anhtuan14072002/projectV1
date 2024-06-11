@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:8889
--- Generation Time: Jun 08, 2024 at 11:47 AM
+-- Generation Time: Jun 11, 2024 at 07:25 AM
 -- Server version: 5.7.24
 -- PHP Version: 8.1.0
 
@@ -60,44 +60,46 @@ INSERT INTO `calligraphers` (`ID`, `Title`, `Img_url`, `style_id`, `card_id`) VA
 (18, 'Roman Capitals', 'fb-Roman_Capitals.jpg', 5, NULL),
 (19, 'Spencerian Calligraphy', 'fb-Spencerian_Calligraphy.jpg', 5, NULL),
 (20, 'Uncial Calligraphy\r\n', 'fb-Uncial_Calligraphy.jpg', 5, NULL),
-(21, 'Art', 'we-art.jpg', 1, NULL),
-(22, 'Assortment', 'we-assortment.jpg', 1, NULL),
-(23, 'background Travel', 'we-background_travel.jpg', 1, NULL),
-(24, 'Bar', 'we-bar.jpg', 1, NULL),
-(25, 'Cab', 'we-cab.jpg', 1, NULL),
-(26, 'Christmas\r\n', 'we-christmas.jpg\r\n', 1, NULL),
-(27, 'christmas decoration\r\n', 'we-christmas_decoration.jpg\r\n', 1, NULL),
-(28, 'cleaning logo\r\n', 'we-cleaning_logo.jpg\r\n', 1, NULL),
-(29, 'collection', 'we-collection.jpg\r\n', 1, NULL),
-(30, 'creative text', 'we-creative_text.jpg', 1, NULL),
-(31, 'creative_text2', 'we-creative_text2.jpg', 1, NULL),
-(32, 'goodbye', 'we-goodbye.jpg\r\n', 1, NULL),
-(33, 'handwritten', 'AB-handwritten.jpg', 2, NULL),
-(34, 'happines\r\n', 'AB-happines.jpg\r\n', 2, NULL),
-(35, 'happy new year', 'AB-happy_new_year.jpg', 1, NULL),
-(36, 'illustrations', 'AB-illustrations.jpg', 2, NULL),
-(37, 'inspirational quotes', 'AB-inspirational_quotes.jpg', 2, NULL),
-(38, 'inspirational Quotes2\r\n', 'AB-inspirational_uotes.jpg\r\n', 2, NULL),
-(39, 'lettering\r\n', 'AB-lettering.jpg\r\n', 2, NULL),
-(40, 'lettering 1', 'AB-lettering.jpg\r\n', 2, NULL),
-(41, 'life quotes', 'AB-life_quotes.jpg', 2, NULL),
-(42, 'luggage tag', 'AB-luggage_tag.jpg\r\n', 2, NULL),
-(43, 'motivational quotes', 'AB-motivational_quotes.jpg', 2, NULL),
-(44, 'motivational quotes 1', 'AB-motivational_quotes.jpg', 2, NULL),
-(45, 'motivational quotes 2', 'AB-motivational_quotes2.jpg\r\n', 2, NULL),
-(46, 'pandemic', 'OT-pandemic.jpg\r\n', 3, NULL),
-(47, 'positive', 'OT-positive.jpg', 3, NULL),
-(48, 'positive quote', 'OT-positive_quote.jpg\r\n', 3, NULL),
-(49, 'positivity', 'OT-positivity.jpg\r\n', 3, NULL),
-(50, 'quote', 'OT-quote.jpg\r\n', 3, NULL),
-(51, 'simple', 'OT-simple.jpg\r\n', 3, NULL),
-(52, 'sticker', 'OT-sticker.jpg\r\n', 3, NULL),
-(53, 'Thanks you', 'OT-thanks_you.jpg\r\n', 3, NULL),
-(54, 'tulip', 'OT-tulip.jpg', 3, NULL),
-(55, 'typography', 'OT-typography.jpg\r\n', 3, NULL),
-(56, 'velor', 'OT-velor.jpg\r\n', 3, NULL),
-(57, 'word', 'OT-word.jpg\r\n', 3, NULL),
-(58, 'word 1', 'OT-word.jpg\r\n', 3, NULL);
+(21, 'Art', 'fb_art.jpg', 5, NULL),
+(22, 'Assortment', 'fb_assortment.jpg', 5, NULL),
+(23, 'background Travel', 'fb_background_travel.jpg', 5, NULL),
+(24, 'Bar', 'fb_bar.jpg', 5, NULL),
+(25, 'Cab', 'fb_cab.jpg', 5, NULL),
+(26, 'Christmas\r\n', 'fb_christmas.jpg\r\n', 5, NULL),
+(27, 'christmas decoration\r\n', 'fb_christmas_decoration.jpg\r\n', 5, NULL),
+(28, 'cleaning logo\r\n', 'fb_cleaning_logo.jpg\r\n', 5, NULL),
+(29, 'collection', 'fb_collection.jpg\r\n', 5, NULL),
+(30, 'creative text', 'fb_creative_text.jpg', 5, NULL),
+(31, 'creative_text2', 'fb_creative_text2.jpg', 5, NULL),
+(32, 'goodbye', 'fb_goodbye.jpg\r\n', 5, NULL),
+(33, 'handwritten', 'fb_handwritten.jpg', 5, NULL),
+(34, 'happines\r\n', 'fb_happines.jpg\r\n', 5, NULL),
+(35, 'happy new year', 'fb_happy_new_year.jpg', 5, NULL),
+(36, 'illustrations', 'fb_illustrations.jpg', 5, NULL),
+(37, 'inspirational quotes', 'fb_inspirational_quotes.jpg', 5, NULL),
+(38, 'inspirational Quotes2\r\n', 'fb_inspirational_uotes.jpg\r\n', 5, NULL),
+(39, 'lettering\r\n', 'fb_lettering.jpg\r\n', 5, NULL),
+(40, 'lettering 1', 'fb_lettering.jpg\r\n', 5, NULL),
+(41, 'life quotes', 'fb_life_quotes.jpg', 5, NULL),
+(42, 'luggage tag', 'fb_luggage_tag.jpg\r\n', 5, NULL),
+(43, 'motivational quotes', 'fb_motivational_quotes.jpg', 5, NULL),
+(44, 'motivational quotes 1', 'fb_motivational_quotes.jpg', 5, NULL),
+(45, 'motivational quotes 2', 'fb_motivational_quotes2.jpg\r\n', 5, NULL),
+(46, 'pandemic', 'fb_pandemic.jpg\r\n', 5, NULL),
+(47, 'positive', 'fb_positive.jpg', 5, NULL),
+(48, 'positive quote', 'fb_positive_quote.jpg\r\n', 5, NULL),
+(49, 'positivity', 'fb_positivity.jpg\r\n', 5, NULL),
+(50, 'quote', 'fb_quote.jpg\r\n', 5, NULL),
+(51, 'simple', 'fb_simple.jpg\r\n', 5, NULL),
+(52, 'sticker', 'fb_sticker.jpg\r\n', 5, NULL),
+(53, 'Thanks you', 'fb_thanks_you.jpg\r\n', 5, NULL),
+(54, 'tulip', 'fb_tulip.jpg', 5, NULL),
+(55, 'typography', 'fb_typography.jpg\r\n', 5, NULL),
+(56, 'velor', 'fb_velor.jpg\r\n', 5, NULL),
+(57, 'word', 'fb_word.jpg\r\n', 5, NULL),
+(58, 'word 1', 'fb_word.jpg\r\n', 5, NULL),
+(59, 'Art', 'fb_art.jpg', 5, NULL),
+(60, 'Bar', 'fb_bar.jpg', 5, NULL);
 
 -- --------------------------------------------------------
 
@@ -182,7 +184,7 @@ ALTER TABLE `style`
 -- AUTO_INCREMENT for table `calligraphers`
 --
 ALTER TABLE `calligraphers`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=59;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61;
 
 --
 -- AUTO_INCREMENT for table `card_learn`
