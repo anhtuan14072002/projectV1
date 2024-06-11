@@ -17,14 +17,21 @@
       </ul>
       <ul>
         <li class="header_li"><a href="#"><b>Favorite</b></a></li>
-        <li class="header_li"><a href="#"><b>Log in</b></a></li>
-        <li class="header_li signup"><a href="#"><b>Sign up</b></a></li>
+        <?php if(isset($_SESSION["auth"]) && $_SESSION["auth"] != null):?>
+          <a class="p-2 ms-2" href="/profile.php"><?php echo $_SESSION["auth"]["full_name"];?></a>
+          <a class="p-2 ms-2" href="/logout.php">Logout</a>
+        <?php else:?>
+         <li class="header_li"><a href="login.php"><b>Log in</b></a></li>
+         <li class="header_li signup"><a href="register.php"><b>Sign up</b></a></li>
+        <?php endif;?>
       </ul>
     </div>
     <div class="main-heading">Search for the calligraphy you want</div>
     <div class="sub-heading">Images, galleries, videos, calligraphy from basic to detailed</div>
+    <form action="library.php" method="GET">
     <div class="search-bar">
-      <input type="text" placeholder="Search for assets">
-      <button><i class="bi bi-search"></i></button>
+      <input value="<?php echo $search; ?>" type="text" placeholder="Search for assets">
+      <button type="submit"><i class="bi bi-search"></i></button>
     </div>
+    </form>
 </div>

@@ -1,47 +1,20 @@
+<?php 
+    require_once("function/calligraphy.php");
+    $hot_items = hot_items();
+
+
+?>
+
 <div class="top10_calligraphy">
         <h4>TOP 10 Calligraphy Styles For Beginners</h4>
         <div class="swiper-container">
             <div class="swiper-wrapper">
+                <?php foreach($hot_items as $item):?>
                 <div class="swiper-slide top10_card_calligraphy">
-                    <a href=""><img src="/images/Copperplate_calligraphy.jpg"  /></a>
-                    <div class="text-overlay">Copperplate calligraphy</div>
+                    <a href="/detail.php?id=<?php echo $item["id"];?>"><img src="/images/<?php echo $item["Img_url"];?>"  /></a>
+                    <div class="text-overlay"><?php echo $item["Title"];?></div>
                 </div>
-                <div class="swiper-slide top10_card_calligraphy">
-                    <a href=""><img src="/images/Copperplate_calligraphy.jpg"  /></a>
-                    <div class="text-overlay">Copperplate calligraphy</div>
-                </div>
-                <div class="swiper-slide top10_card_calligraphy">
-                    <a href=""><img src="/images/Copperplate_calligraphy.jpg"  /></a>
-                    <div class="text-overlay">Copperplate calligraphy</div>
-                </div>
-                <div class="swiper-slide top10_card_calligraphy">
-                    <a href=""><img src="/images/Copperplate_calligraphy.jpg"  /></a>
-                    <div class="text-overlay">Copperplate calligraphy</div>
-                </div>
-                <div class="swiper-slide top10_card_calligraphy">
-                    <a href=""><img src="/images/Copperplate_calligraphy.jpg"  /></a>
-                    <div class="text-overlay">Copperplate calligraphy</div>
-                </div>
-                <div class="swiper-slide top10_card_calligraphy">
-                    <a href=""><img src="/images/Copperplate_calligraphy.jpg"  /></a>
-                    <div class="text-overlay">Copperplate calligraphy</div>
-                </div>
-                <div class="swiper-slide top10_card_calligraphy">
-                    <a href=""><img src="/images/Copperplate_calligraphy.jpg"  /></a>
-                    <div class="text-overlay">Copperplate calligraphy</div>
-                </div>
-                <div class="swiper-slide top10_card_calligraphy">
-                    <a href=""><img src="/images/Copperplate_calligraphy.jpg"  /></a>
-                    <div class="text-overlay">Copperplate calligraphy</div>
-                </div>
-                <div class="swiper-slide top10_card_calligraphy">
-                    <a href=""><img src="/images/Copperplate_calligraphy.jpg"  /></a>
-                    <div class="text-overlay">Copperplate calligraphy</div>
-                </div>
-                <div class="swiper-slide top10_card_calligraphy">
-                    <a href=""><img src="/images/Copperplate_calligraphy.jpg"  /></a>
-                    <div class="text-overlay">Copperplate calligraphy</div>
-                </div>
+                <?php endforeach; ?>
             </div>
             <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>

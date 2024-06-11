@@ -1,3 +1,10 @@
+<?php 
+    require_once("function/calligraphy.php");
+    $lib1 = lib1();
+
+    require_once("function/search.php");
+
+?>
 <div class="library">
     <div class="articles_library">
         <div class="detail_library">
@@ -18,11 +25,12 @@
         </div>
         <div class="card_all">
             <!-- lấy ảnh và description tại sql, ảnh bắt đầu bằng li -->
+            <?php foreach($lib1 as $item):?>
             <div class="card_library">
                 <div class="card">
-                    <img src="/images/li_calligraphy101.png" class="card-img-top" alt="...">
+                    <img src="/images/<?php echo $item["Img_url"];?>" height="298" width="298" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title" style="font-weight:800;">Card title</h5>
+                        <h5 class="card-title" style="font-weight:800;"><?php echo $item["Title"];?></h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of
                             the card's content.</p>
                         <a href="/calligraphy_101.php" class="btn btn-primary">Go somewhere</a>
@@ -30,70 +38,8 @@
                     </div>
                 </div>
             </div>
-            <div class="card_library">
-                <div class="card">
-                    <img src="/images/li_calligraphy101.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title" style="font-weight:800;">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
-                        <a href="/ealligraphy_effectively.php" class="btn btn-primary">Go somewhere</a>
-                        <button class="button_heart"><i class="bi bi-star"></i></button>
-
-                    </div>
-                </div>
-            </div>
-            <div class="card_library">
-                <div class="card">
-                    <img src="/images/li_calligraphy101.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title" style="font-weight:800;">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
-                        <a href="/10_Calligraphy_styles.php" class="btn btn-primary">Go somewhere</a>
-                        <button class="button_heart"><i class="bi bi-star"></i></button>
-
-                    </div>
-                </div>
-            </div>
-            <div class="card_library">
-                <div class="card">
-                    <img src="/images/li_calligraphy101.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title" style="font-weight:800;">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
-                        <a href="/type_anatomy.php" class="btn btn-primary">Go somewhere</a>
-                        <button class="button_heart"><i class="bi bi-star"></i></button>
-                    </div>
-                </div>
-            </div>
-            <div class="card_library">
-                <div class="card">
-                    <img src="/images/li_calligraphy101.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title" style="font-weight:800;">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
-                        <a href="Handwriting.php" class="btn btn-primary">Go somewhere</a>
-                        <button class="button_heart"><i class="bi bi-star"></i></button>
-
-                    </div>
-                </div>
-            </div>
-            <div class="card_library">
-                <div class="card">
-                    <img src="/images/li_calligraphy101.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title" style="font-weight:800;">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
-                        <a href="calligraphy_Paper.php" class="btn btn-primary">Go somewhere</a>
-                        <button class="button_heart"><i class="bi bi-star"></i></button>
-
-                    </div>
-                </div>
-            </div>
+            <? endforeach;?>
+            
         </div>
         <nav aria-label="Page navigation example">
             <ul class="pagination ttt">

@@ -1,72 +1,22 @@
+<?php 
+    require_once("function/calligraphy.php");
+    $feedback_items2 = feedback_items2();
+
+
+?>
+
 <div class="feedback_calligraphy2">
     <div class="slideshow-container2">
         <div class="slideshow-content2">
             <!-- chèn ảnh có đầu fb -->
+            <?php foreach($feedback_items2 as $item):?>
             <div class="feedback_calligraphy_detail2">
                 <div class="feedback_calligraphy_detail" onclick="openImageInfoBox('/images/latest_articles.jpg')">
-                    <img src="/images/latest_articles.jpg" alt="">
+                    <img src="/images/<?php echo $item["Img_url"];?>" alt="">
                 </div>
             </div>
-            <div class="feedback_calligraphy_detail2">
-                <div class="feedback_calligraphy_detail" onclick="openImageInfoBox('/images/latest_articles.jpg')">
-                    <img src="/images/latest_articles.jpg" alt="">
-                </div>
-            </div>
-            <div class="feedback_calligraphy_detail2">
-                <div class="feedback_calligraphy_detail" onclick="openImageInfoBox('/images/latest_articles.jpg')">
-                    <img src="/images/latest_articles.jpg" alt="">
-                </div>
-            </div>
-            <div class="feedback_calligraphy_detail2">
-                <div class="feedback_calligraphy_detail" onclick="openImageInfoBox('/images/latest_articles.jpg')">
-                    <img src="/images/latest_articles.jpg" alt="">
-                </div>
-            </div>
-            <div class="feedback_calligraphy_detail2">
-                <div class="feedback_calligraphy_detail" onclick="openImageInfoBox('/images/latest_articles.jpg')">
-                    <img src="/images/latest_articles.jpg" alt="">
-                </div>
-            </div>
-            <div class="feedback_calligraphy_detail2">
-                <div class="feedback_calligraphy_detail" onclick="openImageInfoBox('/images/latest_articles.jpg')">
-                    <img src="/images/latest_articles.jpg" alt="">
-                </div>
-            </div>
-            <div class="feedback_calligraphy_detail2">
-                <div class="feedback_calligraphy_detail" onclick="openImageInfoBox('/images/latest_articles.jpg')">
-                    <img src="/images/latest_articles.jpg" alt="">
-                </div>
-            </div>
-            <div class="feedback_calligraphy_detail2">
-                <div class="feedback_calligraphy_detail" onclick="openImageInfoBox('/images/latest_articles.jpg')">
-                    <img src="/images/latest_articles.jpg" alt="">
-                </div>
-            </div>
-            <div class="feedback_calligraphy_detail2">
-                <div class="feedback_calligraphy_detail" onclick="openImageInfoBox('/images/latest_articles.jpg')">
-                    <img src="/images/latest_articles.jpg" alt="">
-                </div>
-            </div>
-            <div class="feedback_calligraphy_detail2">
-                <div class="feedback_calligraphy_detail" onclick="openImageInfoBox('/images/latest_articles.jpg')">
-                    <img src="/images/latest_articles.jpg" alt="">
-                </div>
-            </div>
-            <div class="feedback_calligraphy_detail2">
-                <div class="feedback_calligraphy_detail" onclick="openImageInfoBox('/images/latest_articles.jpg')">
-                    <img src="/images/latest_articles.jpg" alt="">
-                </div>
-            </div>
-            <div class="feedback_calligraphy_detail2">
-                <div class="feedback_calligraphy_detail" onclick="openImageInfoBox('/images/latest_articles.jpg')">
-                    <img src="/images/latest_articles.jpg" alt="">
-                </div>
-            </div>
-            <div class="feedback_calligraphy_detail2">
-                <div class="feedback_calligraphy_detail" onclick="openImageInfoBox('/images/latest_articles.jpg')">
-                    <img src="/images/latest_articles.jpg" alt="">
-                </div>
-            </div>
+            <?php endforeach; ?>
+            
         </div>
     </div>
 </div>
