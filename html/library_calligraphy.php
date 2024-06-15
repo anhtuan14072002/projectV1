@@ -34,7 +34,7 @@
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of
                             the card's content.</p>
                         <a href="/calligraphy_101.php" class="btn btn-primary">Go somewhere</a>
-                        <button class="button_heart"><i class="bi bi-star"></i></button>
+                        <button class="button_heart"><i class="bi bi-bookmark"></i></button>
                     </div>
                 </div>
             </div>

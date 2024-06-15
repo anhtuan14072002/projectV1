@@ -5,12 +5,7 @@
             <img src="/images/learn2.jpeg" alt="Eastern Calligraphy">
         </div>
         <p>
-        Calligraphy, the art of beautiful writing, is a timeless practice that has captivated cultures across the globe for centuries. It encompasses a wide range of styles, techniques, and cultural influences, each contributing to its rich and diverse tapestry.
-        In exploring the world of calligraphy, one encounters three prominent traditions: Eastern, Western, and Arabic. Each tradition has its own unique characteristics, history, and significance, reflecting the cultural nuances and artistic sensibilities of its respective region.
-        Eastern calligraphy, originating from ancient China, Japan, and Korea, emphasizes the graceful flow of brushstrokes and the harmony of form. It embodies philosophical ideals such as balance, spontaneity, and inner tranquility, with styles ranging from the structured elegance of Chinese Regular Script to the fluid expressiveness of Japanese Cursive Script.
-        In contrast, Western calligraphy places a strong emphasis on the art of letterforms and typography. Rooted in European traditions, it encompasses a diverse array of historical scripts, from the ornate beauty of Gothic calligraphy to the refined simplicity of Italic script. Western calligraphy is celebrated for its meticulous craftsmanship and artistic expression, finding applications in manuscript illumination, book design, and graphic arts.
-        Arabic calligraphy, also known as Islamic calligraphy, holds a special place in the Islamic world as a sacred art form. Characterized by intricate geometric patterns and flowing lines, Arabic calligraphy adorns mosques, Qur'ans, and other religious texts with reverence and beauty. Its script styles, such as Kufic, Naskh, and Thuluth, reflect centuries of cultural heritage and spiritual devotion.
-        Despite their differences, these three traditions share a common thread: a deep appreciation for the written word as a vehicle for artistic expression, cultural identity, and spiritual enlightenment. Whether it's the meditative strokes of an Eastern brush, the precise lines of a Western pen, or the intricate curves of an Arabic qalam, calligraphy continues to inspire and enchant, transcending boundaries of time and culture.
+        Calligraphy, the art of beautiful writing, is a timeless practice that has captivated cultures across the globe for centuries. It encompasses a wide range of styles, techniques, and cultural influences, each contributing to its rich and diverse tapestry. In exploring the world of calligraphy, one encounters three prominent traditions: Eastern, Western, and Arabic. 
         </p>
         <br>
         <h2>I. Eastern Calligraphy:</h2>

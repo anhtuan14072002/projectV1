@@ -1,0 +1,10 @@
+.text-center{
+    padding: 20px;
+}
+.container .btn-primary{
+    display: block;
+    margin: 0 auto;
+    width: 415px;
+    height: 38px;
+    margin-bottom: 20px;
+}

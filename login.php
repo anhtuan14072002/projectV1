@@ -7,6 +7,7 @@
     <title>Register</title>
     <link rel="stylesheet" href="css/navbar2.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/login.css">
     <?php include_once("styles/styles.php") ?>
 </head>
 
