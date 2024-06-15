@@ -21,8 +21,17 @@ function callig_detail($callig_id)  {
     return null;
 }
 
-function hot_items(){
+function top_books(){
     $sql = "select * from calligraphers where style_id = 4";
+    $result = query($sql);
+    $list = [];
+    while($row = $result->fetch_assoc()){
+        $list[] = $row;
+    }
+    return $list;
+}
+function  hot_items(){
+    $sql = "select * from calligraphers where style_id = 6";
     $result = query($sql);
     $list = [];
     while($row = $result->fetch_assoc()){
@@ -50,8 +59,7 @@ function feedback_items2(){
     }
     return $list;
 }
-
-function top_books(){
+function lib_calli(){
     $sql = "select * from card_learn";
     $result = query($sql);
     $list = [];

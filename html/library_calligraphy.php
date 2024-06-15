@@ -1,6 +1,6 @@
 <?php 
     require_once("function/calligraphy.php");
-    $lib1 = lib1();
+    $lib_calli = lib_calli();
 
     require_once("function/search.php");
 
@@ -25,15 +25,14 @@
         </div>
         <div class="card_all">
             <!-- lấy ảnh và description tại sql, ảnh bắt đầu bằng li -->
-            <?php foreach($lib1 as $item):?>
+            <?php foreach($lib_calli as $item):?>
             <div class="card_library">
                 <div class="card">
-                    <img src="/images/<?php echo $item["Img_url"];?>" height="298" width="298" class="card-img-top" alt="...">
+                    <img src="/images/<?php echo $item["thumbnail"];?>" height="250" width="298" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title" style="font-weight:800;"><?php echo $item["Title"];?></h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
-                        <a href="/calligraphy_101.php" class="btn btn-primary">Go somewhere</a>
+                        <h5 class="card-title" style="font-weight:800;"><?php echo $item["name"];?></h5>
+                        <p class="card-text"><?php echo $item["description"];?></p>
+                        <a href="<?php echo $item["link_card"];?>" class="btn btn-primary">Read More</a>
                         <button class="button_heart"><i class="bi bi-bookmark"></i></button>
                     </div>
                 </div>
@@ -41,7 +40,7 @@
             <? endforeach;?>
             
         </div>
-        <nav aria-label="Page navigation example">
+        <!-- <nav aria-label="Page navigation example">
             <ul class="pagination ttt">
                 <li class="page-item">
                     <a class="page-link" href="/library.php" aria-label="Previous">
@@ -56,7 +55,7 @@
                     </a>
                 </li>
             </ul>
-        </nav>
+        </nav> -->
     </div>
 
     <div class="video_library">
