@@ -42,8 +42,8 @@
 
 .text-overlay {
     position: absolute;
-    top: 50px;
-    left: 30px;
+    top: 20px;
+    left: 15px;
     color: #fafafa;
     text-align: center;
     font-size: 18px; 

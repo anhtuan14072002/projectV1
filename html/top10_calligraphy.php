@@ -12,10 +12,12 @@
                 <?php foreach($hot_items as $item):?>
                 <div class="swiper-slide top10_card_calligraphy">
                     <a href="/detail.php?id=<?php echo $item["id"];?>"><img src="/images/<?php echo $item["Img_url"];?>"  /></a>
-                    <div class="text-overlay"><?php echo $item["Title"];?></div>
                 </div>
                 <?php endforeach; ?>
+
             </div>
+            
+
             <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>
         </div>
