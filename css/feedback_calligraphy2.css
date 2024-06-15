@@ -19,6 +19,7 @@
     background-color: #fff;
     padding: 35px;
     border-radius: 10px;
+    width: 600px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     z-index: 1001;
     display: none;
@@ -62,6 +63,8 @@
 .feedback_calligraphy_detail2 img {
     width: 300px;
     height: 200px;
+    cursor: pointer;
+
 }
 
 @keyframes scroll2 {

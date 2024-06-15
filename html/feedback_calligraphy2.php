@@ -4,14 +4,12 @@
 
 
 ?>
-
 <div class="feedback_calligraphy2">
     <div class="slideshow-container2">
         <div class="slideshow-content2">
-            <!-- chèn ảnh có đầu fb -->
             <?php foreach($feedback_items2 as $item):?>
             <div class="feedback_calligraphy_detail2">
-                <div class="feedback_calligraphy_detail" onclick="openImageInfoBox('/images/latest_articles.jpg')">
+                <div class="feedback_calligraphy_detail2" onclick="openImageInfoBox('/images/<?php echo $item['Img_url']; ?>')">
                     <img src="/images/<?php echo $item["Img_url"];?>" alt="">
                 </div>
             </div>

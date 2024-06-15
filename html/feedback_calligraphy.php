@@ -9,11 +9,10 @@
     <h2>Posts left by students</h2>
     <h6>Articles by people who have learned calligraphy from this site</h6>
     <div class="slideshow-container">
-        <!-- chèn ảnh có đầu fb -->
         <div class="slideshow-content">
             <?php foreach($feedback_items1 as $item):?>
             <div class="feedback_calligraphy_detail">
-                <div class="feedback_calligraphy_detail" onclick="openImageInfoBox('/images/latest_articles.jpg')">
+                <div class="feedback_calligraphy_detail" onclick="openImageInfoBox('/images/<?php echo $item['Img_url']; ?>')">
                     <img src="/images/<?php echo $item["Img_url"];?>" alt="">
                 </div>
             </div>
