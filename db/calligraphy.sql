@@ -2,10 +2,10 @@
 -- version 5.1.2
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:8889
--- Generation Time: Jun 11, 2024 at 07:25 AM
--- Server version: 5.7.24
--- PHP Version: 8.1.0
+-- Máy chủ: localhost:3306
+-- Thời gian đã tạo: Th6 15, 2024 lúc 12:12 PM
+-- Phiên bản máy phục vụ: 5.7.24
+-- Phiên bản PHP: 8.1.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `calligraphy`
+-- Cơ sở dữ liệu: `calligraphy`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `calligraphers`
+-- Cấu trúc bảng cho bảng `calligraphers`
 --
 
 CREATE TABLE `calligraphers` (
@@ -36,17 +36,17 @@ CREATE TABLE `calligraphers` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `calligraphers`
+-- Đang đổ dữ liệu cho bảng `calligraphers`
 --
 
 INSERT INTO `calligraphers` (`ID`, `Title`, `Img_url`, `style_id`, `card_id`) VALUES
 (1, 'Calligraphy', 'bookCalligraphy.jpg', 4, NULL),
-(2, 'Foundations Of Calligraphy', 'book-Foundations Of Calligraphy', 4, NULL),
+(2, 'Foundations Of Calligraphy', 'book-Foundations_Of_Calligraphy.jpg', 4, NULL),
 (3, 'Mastering Copperplate Calligraphy\r\n', 'book-Mastering_Copperplate_Calligraphy.jpg\r\n', 4, NULL),
-(4, 'Medieval Calligraphy Its History and Technique', 'book-Medieval_Calligraphy_Its_History_and_Technique.jpg', 4, NULL),
+(4, 'Medieval Calligraphy Its History and Technique', 'book_Medieval_Calligraphy_Its_History_and_Technique.jpg', 4, NULL),
 (5, 'Modern Calligraphy\r\n', 'book-Modern_Calligraphy.jpg\r\n', 4, NULL),
 (6, 'The Art of Calligraphy', 'book-The_Art_Of_Calligraphy.jpg', 4, NULL),
-(7, 'The Bible of Illuminated Letters\r\n', 'book-The_Bible_of_Illuminated_Letters.jpg\r\n', 4, NULL),
+(7, 'The Bible of Illuminated Letters\r\n', 'book_The_Bible of_Illuminated_Letters.jpg', 4, NULL),
 (8, 'The Calligrapher’s Bible\r\n', 'book-The_Calligrapher’s_Bible.jpg\r\n', 4, NULL),
 (9, 'The Speedball Textbook (multiple editions)\r\n', 'book-The_Speedball_Textbook_(multiple editions).jpg\r\n', 4, NULL),
 (10, 'Writing & Illuminating & Lettering.jpg\r\n', 'book-Writing_&_Illuminating_&_Lettering.jpg\r\n', 4, NULL),
@@ -99,65 +99,24 @@ INSERT INTO `calligraphers` (`ID`, `Title`, `Img_url`, `style_id`, `card_id`) VA
 (57, 'word', 'fb_word.jpg\r\n', 5, NULL),
 (58, 'word 1', 'fb_word.jpg\r\n', 5, NULL),
 (59, 'Art', 'fb_art.jpg', 5, NULL),
-(60, 'Bar', 'fb_bar.jpg', 5, NULL);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `card_learn`
---
-
-CREATE TABLE `card_learn` (
-  `id` int(11) NOT NULL,
-  `name` varchar(255) DEFAULT NULL,
-  `thumbnail` varchar(255) DEFAULT NULL,
-  `description` text
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+(60, 'Bar', 'fb_bar.jpg', 5, NULL),
+(61, 'Blackletter_calligraphy', 'top_10_styles_menu_Blackletter_calligraphy.jpg', 6, NULL),
+(80, 'Copperplate_calligraphy', 'top_10_styles_menu_Copperplate_calligraphy.jpg', 6, NULL),
+(81, 'Foundational_Hand', 'top_10_styles_menu_Foundational_Hand.jpg', 6, NULL),
+(82, 'Gothicized_Italic', 'top_10_styles_menu_Gothicized_Italic.jpg', 6, NULL),
+(83, 'Italic_calligraphy', 'top_10_styles_menu_Italic_calligraphy.jpg', 6, NULL),
+(84, 'Modern_Calligraphy', 'top_10_styles_menu_Modern_Calligraphy.jpg', 6, NULL),
+(85, 'Neuland_Calligraphy', 'top_10_styles_menu_Neuland_Calligraphy.jpg', 6, NULL),
+(86, 'Roman_Capitals', 'top_10_styles_menu_Roman_Capitals.jpg', 6, NULL),
+(87, 'Spencerian_Calligraphy', 'top_10_styles_menu_Spencerian_Calligraphy.jpg', 6, NULL),
+(88, 'Uncial_Calligraphy', 'top_10_styles_menu_Uncial_Calligraphy.jpg', 6, NULL);
 
 --
--- Dumping data for table `card_learn`
---
-
-INSERT INTO `card_learn` (`id`, `name`, `thumbnail`, `description`) VALUES
-(1, 'Calligraphy 101 – The ULTIMATE Guide For Beginners\r\n', 'Calligraphy101.png', 'If you want to learn how to start with calligraphy, you’ve come to the right place. On this page, you […]'),
-(2, 'How To Practice Calligraphy Effectively\r\n', 'HowToPractice.jpg', 'In this article, I will show you how to practice calligraphy effectively.  If you’re struggling to see improvements in your'),
-(3, '10 Calligraphy Styles For Beginners', '10CalligraphyStylesForBeginners.jpg', 'Do you want to start practicing calligraphy, but you’re not sure which calligraphy style to choose from? You’ve come to'),
-(4, 'Type Anatomy – Understanding The Parts Of Letters (+FREE Poster)', 'TypeAnatomy.png', 'Have you ever wondered what the different parts of letters are called?  Each part has a specific name in type'),
-(5, 'How To Make Handwritten Fonts on Your iPad', 'HowToMake.png', 'In this article, I will show you how to create custom hand-drawn and handwritten fonts using your iPad and the'),
-(6, 'Calligraphy Paper – The Ultimate Guide For Beginners', 'CalligraphyPaper.jpg', 'In this article, I will teach you everything I know about calligraphy paper. Calligraphy paper is extremely important and can'),
-(7, 'How To Improve Your Handwriting (+FREE Worksheets)', 'HowToImprove.jpg', 'When someone asks, “How can I improve my handwriting?” they usually look for a few things they can easily implement'),
-(8, '6 Essential Calligraphy Tools For Beginners', '6EssentialCalligraphy.jpg', 'In this article, I will show you the essential calligraphy tools you need to get started with the art of'),
-(9, 'Brush Calligraphy Alphabet – a to z (Lowercase Letters)', 'BrushCalligraphyAlphabet.jpg', 'In this tutorial, I will teach you how to write a whole (lowercase) calligraphy alphabet. I will create this calligraphy'),
-(10, 'The Basic Calligraphy Strokes Guide (+FREE Worksheets)', 'TheBasicCalligraphyStrokesGuide.png', 'The basic calligraphy strokes are the best way to learn calligraphy as a beginner. In fact, the number one struggle');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `style`
---
-
-CREATE TABLE `style` (
-  `ID` int(11) NOT NULL,
-  `name` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `style`
---
-
-INSERT INTO `style` (`ID`, `name`) VALUES
-(1, 'Western'),
-(2, 'Arabic'),
-(3, 'Oriental'),
-(4, 'book'),
-(5, 'feedback');
-
---
--- Indexes for dumped tables
+-- Chỉ mục cho các bảng đã đổ
 --
 
 --
--- Indexes for table `calligraphers`
+-- Chỉ mục cho bảng `calligraphers`
 --
 ALTER TABLE `calligraphers`
   ADD PRIMARY KEY (`ID`),
@@ -165,45 +124,21 @@ ALTER TABLE `calligraphers`
   ADD KEY `fk_card_learn` (`card_id`);
 
 --
--- Indexes for table `card_learn`
---
-ALTER TABLE `card_learn`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `style`
---
-ALTER TABLE `style`
-  ADD PRIMARY KEY (`ID`);
-
---
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT cho các bảng đã đổ
 --
 
 --
--- AUTO_INCREMENT for table `calligraphers`
+-- AUTO_INCREMENT cho bảng `calligraphers`
 --
 ALTER TABLE `calligraphers`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=89;
 
 --
--- AUTO_INCREMENT for table `card_learn`
---
-ALTER TABLE `card_learn`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
-
---
--- AUTO_INCREMENT for table `style`
---
-ALTER TABLE `style`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
---
--- Constraints for dumped tables
+-- Các ràng buộc cho các bảng đã đổ
 --
 
 --
--- Constraints for table `calligraphers`
+-- Các ràng buộc cho bảng `calligraphers`
 --
 ALTER TABLE `calligraphers`
   ADD CONSTRAINT `calligraphers_ibfk_1` FOREIGN KEY (`style_id`) REFERENCES `style` (`ID`),
