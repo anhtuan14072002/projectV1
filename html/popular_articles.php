@@ -2,33 +2,33 @@
     <h2>Check out the most popular articles</h2>   
     <div class="popular_detail">
         <div class="popular">
-            <a href=""><img src="/images/popular_articles.jpg"/>
-            <p>How To Learn Sign Painting (Step-By-Step 2024)</p>
+            <a href="/Handwriting.php"><img src="/images/HowToImprove.jpg"/>
+            <p>How To Improve Your Handwriting (+FREE Worksheets)</p>
             </a>
         </div>
         <div class="popular">
-            <a href=""><img src="/images/popular_articles2.jpg"/>
-            <p>Copperplate Calligraphy For Beginners (+FREE Worksheets)</p>
+            <a href="/6_Essential.php"><img src="/images/6EssentialCalligraphy.jpg"/>
+            <p>6 Essential Calligraphy Tools For Beginners</p>
             </a>
         </div>
         <div class="popular">
-            <a href=""><img src="/images/popular_articles3.jpg"/>
-            <p>What is the Difference Between Hand Lettering And Calligraphy?</p>  
+            <a href="/brushcalligraphy.php"><img src="/images/BrushCalligraphyAlphabet.jpg"/>
+            <p>Brush Calligraphy Alphabet – a to z (Lowercase Letters)</p>  
             </a>
         </div>
         <div class="popular">
-            <a href=""><img src="/images/popular_articles4.jpg"/>
-            <p>How To Do Brush Lettering – The Ultimate Guide (+FREE Worksheets)</p>  
+            <a href="/basiccalligraphy.php"><img src="/images/TheBasicCalligraphyStrokesGuide.png"/>
+            <p>The Basic Calligraphy Strokes Guide (+FREE Worksheets)</p>  
             </a>
         </div>
         <div class="popular">
-            <a href=""><img src="/images/popular_articles5.jpg"/>
-            <p>Blackletter/Gothic Calligraphy For Beginners (+FREE Worksheets)</p>  
+            <a href="/10BestCalligraphyBooks.php"><img src="/images/10BestCalligraphyBooks.jpg"/>
+            <p>10 Best Calligraphy Books For Beginners</p>  
             </a>
         </div>
         <div class="popular">
-            <a href=""><img src="/images/popular_articles6.jpg"/>
-            <p>5 AMAZING Hand Lettering Effects That Anyone Can Do</p>  
+            <a href="/western.php"><img src="/images/popular_articles6.jpg"/>
+            <p>How to learn Western calligraphy</p>  
             </a>
         </div>
     </div>
