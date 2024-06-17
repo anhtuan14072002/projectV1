@@ -1,12 +1,15 @@
 <?php 
+session_start(); // Bắt đầu phiên
 function logout() {
-    // Xóa tất cả dữ liệu của phiên
+    // die("fail");
     session_unset();
-
-    // Hủy phiên
     session_destroy();
+    if (isset($_SERVER['HTTP_REFERER'])) {
+        $previousPage = $_SERVER['HTTP_REFERER'];
+    } else {
+        $previousPage = 'index.php';
+    }
 
-    // Chuyển hướng người dùng về trang đăng nhập hoặc trang chủ
-    header("Location: index.php");
-    exit();
+    header("Location: $previousPage");
 }
+logout();

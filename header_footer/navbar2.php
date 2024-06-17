@@ -27,6 +27,7 @@
           <a class="p-2 ms-2" href="/profile.php"><?php echo $_SESSION["auth"]["full_name"];?></a>
           <a class="p-2 ms-2" href="/logout.php">Logout</a>
         <?php else:?>
+          <?php $_SESSION['previous_page'] = $_SERVER['REQUEST_URI']; // Lưu URL hiện tại ?>
          <li class="header_li"><a href="login.php"><b>Login</b></a></li>
          <li class="header_li signup"><a href="register.php"><b>Signup</b></a></li>
         <?php endif;?>
