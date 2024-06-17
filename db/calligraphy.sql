@@ -2,10 +2,10 @@
 -- version 5.1.2
 -- https://www.phpmyadmin.net/
 --
--- Máy chủ: localhost:3306
--- Thời gian đã tạo: Th6 15, 2024 lúc 12:12 PM
--- Phiên bản máy phục vụ: 5.7.24
--- Phiên bản PHP: 8.1.0
+-- Host: localhost:3306
+-- Generation Time: Jun 17, 2024 at 12:31 PM
+-- Server version: 5.7.24
+-- PHP Version: 8.1.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Cơ sở dữ liệu: `calligraphy`
+-- Database: `calligraphy`
 --
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `calligraphers`
+-- Table structure for table `calligraphers`
 --
 
 CREATE TABLE `calligraphers` (
@@ -36,7 +36,7 @@ CREATE TABLE `calligraphers` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Đang đổ dữ liệu cho bảng `calligraphers`
+-- Dumping data for table `calligraphers`
 --
 
 INSERT INTO `calligraphers` (`ID`, `Title`, `Img_url`, `style_id`, `card_id`) VALUES
@@ -108,15 +108,87 @@ INSERT INTO `calligraphers` (`ID`, `Title`, `Img_url`, `style_id`, `card_id`) VA
 (84, 'Modern_Calligraphy', 'top_10_styles_menu_Modern_Calligraphy.jpg', 6, NULL),
 (85, 'Neuland_Calligraphy', 'top_10_styles_menu_Neuland_Calligraphy.jpg', 6, NULL),
 (86, 'Roman_Capitals', 'top_10_styles_menu_Roman_Capitals.jpg', 6, NULL),
-(87, 'Spencerian_Calligraphy', 'top_10_styles_menu_Spencerian_Calligraphy.jpg', 6, NULL),
+(87, 'Spencerian_Calligraphy', 'top_10_styles_Spencerian_Calligraphy.jpg', 6, NULL),
 (88, 'Uncial_Calligraphy', 'top_10_styles_menu_Uncial_Calligraphy.jpg', 6, NULL);
 
+-- --------------------------------------------------------
+
 --
--- Chỉ mục cho các bảng đã đổ
+-- Table structure for table `card_learn`
+--
+
+CREATE TABLE `card_learn` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `thumbnail` varchar(255) DEFAULT NULL,
+  `description` text,
+  `link_card` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `card_learn`
+--
+
+INSERT INTO `card_learn` (`id`, `name`, `thumbnail`, `description`, `link_card`) VALUES
+(1, 'Calligraphy 101 – The ULTIMATE Guide For Beginners\r\n', 'Calligraphy101.png', 'If you want to learn how to start with calligraphy, you’ve come to the right place. On this page, you […]', 'calligraphy_101.php'),
+(2, 'How To Practice Calligraphy Effectively\r\n', 'HowToPractice.jpg', 'In this article, I will show you how to practice calligraphy effectively.  If you’re struggling to see improvements in your', 'ealligraphy_effectively.php'),
+(3, '10 Calligraphy Styles For Beginners', '10CalligraphyStylesForBeginners.jpg', 'Do you want to start practicing calligraphy, but you’re not sure which calligraphy style to choose from? You’ve come to', '10_Calligraphy_styles.php'),
+(4, 'Type Anatomy – Understanding The Parts Of Letters (+FREE Poster)', 'type-anatomy.jpg', 'Have you ever wondered what the different parts of letters are called?  Each part has a specific name in type', 'type_anatomy.php'),
+(5, 'How To Make Handwritten Fonts on Your iPad', 'HowToMake.png', 'In this article, I will show you how to create custom hand-drawn and handwritten fonts using your iPad and the', 'Handwriting.php'),
+(6, 'Calligraphy Paper – The Ultimate Guide For Beginners', 'CalligraphyPaper.jpg', 'In this article, I will teach you everything I know about calligraphy paper. Calligraphy paper is extremely important and can', 'calligraphy_Paper.php'),
+(7, 'How To Improve Your Handwriting (+FREE Worksheets)', 'HowToImprove.jpg', 'When someone asks, “How can I improve my handwriting?” they usually look for a few things they can easily implement', 'how_to_improve_handwriting.php'),
+(8, '6 Essential Calligraphy Tools For Beginners', '6EssentialCalligraphy.jpg', 'In this article, I will show you the essential calligraphy tools you need to get started with the art of', '6_Essential.php'),
+(9, 'Brush Calligraphy Alphabet – a to z (Lowercase Letters)', 'BrushCalligraphyAlphabet.jpg', 'In this tutorial, I will teach you how to write a whole (lowercase) calligraphy alphabet. I will create this calligraphy', 'brushcalligraphy.php'),
+(10, 'The Basic Calligraphy Strokes Guide (+FREE Worksheets)', 'TheBasicCalligraphyStrokesGuide.png', 'The basic calligraphy strokes are the best way to learn calligraphy as a beginner. In fact, the number one struggle', 'basiccalligraphy.php');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `style`
+--
+
+CREATE TABLE `style` (
+  `ID` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `style`
+--
+
+INSERT INTO `style` (`ID`, `name`) VALUES
+(1, 'Western'),
+(2, 'Arabic'),
+(3, 'Oriental'),
+(4, 'book'),
+(5, 'feedback'),
+(6, 'top_styles');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE `users` (
+  `full_name` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`full_name`, `email`, `password`) VALUES
+('tunapc', 'zed3132@gmail.com', '$2y$10$8XzEwIipXXAMCczk17IKYuPx6IfIEnQzUuzlUK1tigG6Sh9Wqi0CW');
+
+--
+-- Indexes for dumped tables
 --
 
 --
--- Chỉ mục cho bảng `calligraphers`
+-- Indexes for table `calligraphers`
 --
 ALTER TABLE `calligraphers`
   ADD PRIMARY KEY (`ID`),
@@ -124,21 +196,45 @@ ALTER TABLE `calligraphers`
   ADD KEY `fk_card_learn` (`card_id`);
 
 --
--- AUTO_INCREMENT cho các bảng đã đổ
+-- Indexes for table `card_learn`
+--
+ALTER TABLE `card_learn`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `style`
+--
+ALTER TABLE `style`
+  ADD PRIMARY KEY (`ID`);
+
+--
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT cho bảng `calligraphers`
+-- AUTO_INCREMENT for table `calligraphers`
 --
 ALTER TABLE `calligraphers`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=89;
 
 --
--- Các ràng buộc cho các bảng đã đổ
+-- AUTO_INCREMENT for table `card_learn`
+--
+ALTER TABLE `card_learn`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- AUTO_INCREMENT for table `style`
+--
+ALTER TABLE `style`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- Constraints for dumped tables
 --
 
 --
--- Các ràng buộc cho bảng `calligraphers`
+-- Constraints for table `calligraphers`
 --
 ALTER TABLE `calligraphers`
   ADD CONSTRAINT `calligraphers_ibfk_1` FOREIGN KEY (`style_id`) REFERENCES `style` (`ID`),
