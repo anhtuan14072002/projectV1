@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +8,6 @@
     <link rel="stylesheet" href="css/navbar2.css">
     <link rel="stylesheet" href="css/western_calii.css">
     <?php include_once("styles/styles.php")?>
-    <title>About</title>
 </head>
 <body>
     <div class="nav">

@@ -1,9 +1,7 @@
 <?php 
-    require_once("function/calligraphy.php");
-    $lib_calli = lib_calli();
-
-    require_once("function/search.php");
-
+require_once("function/calligraphy.php");
+$lib_calli = lib_calli();
+require_once("function/search.php");
 ?>
 <div class="library">
     <div class="articles_library">
@@ -27,17 +25,19 @@
             <!-- lấy ảnh và description tại sql, ảnh bắt đầu bằng li -->
             <?php foreach($lib_calli as $item):?>
             <div class="card_library">
-                <div class="card">
+                <div class="card" method="post">
                     <img src="/images/<?php echo $item["thumbnail"];?>" height="250" width="298" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title" style="font-weight:800;"><?php echo $item["name"];?></h5>
                         <p class="card-text"><?php echo $item["description"];?></p>
                         <a href="<?php echo $item["link_card"];?>" class="btn btn-primary">Read More</a>
-                        <button class="button_heart"><i class="bi bi-bookmark"></i></button>
+                        <button class="button_heart" data-id="<?php echo $item["id"]; ?>" onclick="toggleBookmark(this)">
+                            <i class="bi bi-bookmark-fill"></i>
+                        </button>
                     </div>
                 </div>
             </div>
-            <? endforeach;?>
+            <?php endforeach;?>
             
         </div>
         <!-- <nav aria-label="Page navigation example">
@@ -104,3 +104,73 @@
             referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
 </div>
+<script>
+function toggleBookmark(button) {
+    const id = button.getAttribute('data-id');
+    const icon = button.querySelector('i');
+    const bookmarked = icon.classList.contains('bookmarked');
+    
+    fetch('add_bookmark.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: `id=${id}&action=${bookmarked ? 'remove' : 'add'}`,
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            icon.classList.toggle('bookmarked');
+            showNotification(data.action === 'add' ? 'Đã thêm vào bookmark' : 'Đã xóa khỏi bookmark');
+        } else {
+            alert('Cập nhật bookmark thất bại');
+        }
+    });
+}
+
+function showNotification(message) {
+    const notification = document.createElement('div');
+    notification.className = 'notification';
+    notification.textContent = message;
+    document.body.appendChild(notification);
+
+    // Thêm lớp "show" sau khi thêm phần tử vào DOM
+    setTimeout(() => {
+        notification.classList.add('show');
+    }, 10); // Delay nhỏ để kích hoạt CSS transition
+
+    // Xóa thông báo sau 2 giây
+    setTimeout(() => {
+        notification.classList.remove('show');
+        // Xóa phần tử khỏi DOM sau khi hoàn thành hiệu ứng trượt
+        setTimeout(() => {
+            document.body.removeChild(notification);
+        }, 500); // Thời gian tương ứng với transition của CSS
+    }, 2000);
+}
+
+</script>
+
+<style>
+.bookmarked {
+    color: red;
+}
+
+.notification {
+    position: fixed;
+    top: -50px;
+    right: 20px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: top 0.5s ease-in-out;
+}
+
+.notification.show {
+    top: 20px; /* Vị trí cuối cùng khi hiển thị */
+}
+
+</style>

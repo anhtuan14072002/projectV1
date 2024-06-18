@@ -1,3 +1,7 @@
+<?php 
+require_once("function/calligraphy.php");
+$card_calli = card_calli();
+?>
 <div class="header">
     <div class="nav-bar">
       <ul>
@@ -8,9 +12,9 @@
         <li class="header_li"><a href="library.php"><b>Library</b></a></li>
         <li class="header_li submenu_parent"><a href="#"><b>Calligraphy</b></a>
             <ul class="submenu">
-                <li><a href="/western.php">Western</a></li>
-                <li><a href="/arabic.php">Arabic</a></li>
-                <li><a href="/oriental.php">Oriental</a></li>   
+              <?php foreach($card_calli as $item): ?>
+                        <li><a href="/detail.php?id=<?php echo $item['id']; ?>"><?php echo $item['name']; ?></a></li>
+              <?php endforeach; ?> 
             </ul>
         </li>
         <li class="header_li"><a href="contact.php"><b>Contact</b></a></li>
@@ -27,7 +31,6 @@
           <a class="p-2 ms-2" href="/profile.php"><?php echo $_SESSION["auth"]["full_name"];?></a>
           <a class="p-2 ms-2" href="/logout.php">Logout</a>
         <?php else:?>
-          <?php $_SESSION['previous_page'] = $_SERVER['REQUEST_URI']; // Lưu URL hiện tại ?>
          <li class="header_li"><a href="login.php"><b>Login</b></a></li>
          <li class="header_li signup"><a href="register.php"><b>Signup</b></a></li>
         <?php endif;?>
