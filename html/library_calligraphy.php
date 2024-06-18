@@ -45,8 +45,9 @@ $bookmarked = isset($_SESSION["bookmark"]) ? $_SESSION["bookmark"] : [];
                         </form>
                     </div>
                 </div>
-            <? endforeach; ?>
-
+            </div>
+            <? endforeach;?>
+            
         </div>
         <!-- <nav aria-label="Page navigation example">
             <ul class="pagination ttt">
@@ -84,6 +85,77 @@ $bookmarked = isset($_SESSION["bookmark"]) ? $_SESSION["bookmark"] : [];
         <iframe class="video_hot" width="400" height="200" src="https://www.youtube.com/embed/yC2mCPVyGAA?si=zMjsDMVXYu8KoofG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
 </div>
+<script>
+function toggleBookmark(button) {
+    const id = button.getAttribute('data-id');
+    const icon = button.querySelector('i');
+    const bookmarked = icon.classList.contains('bookmarked');
+    
+    fetch('add_bookmark.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: `id=${id}&action=${bookmarked ? 'remove' : 'add'}`,
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            icon.classList.toggle('bookmarked');
+            showNotification(data.action === 'add' ? 'Đã thêm vào bookmark' : 'Đã xóa khỏi bookmark');
+        } else {
+            alert('Cập nhật bookmark thất bại');
+        }
+    });
+}
+
+function showNotification(message) {
+    const notification = document.createElement('div');
+    notification.className = 'notification';
+    notification.textContent = message;
+    document.body.appendChild(notification);
+
+    // Thêm lớp "show" sau khi thêm phần tử vào DOM
+    setTimeout(() => {
+        notification.classList.add('show');
+    }, 10); // Delay nhỏ để kích hoạt CSS transition
+
+    // Xóa thông báo sau 2 giây
+    setTimeout(() => {
+        notification.classList.remove('show');
+        // Xóa phần tử khỏi DOM sau khi hoàn thành hiệu ứng trượt
+        setTimeout(() => {
+            document.body.removeChild(notification);
+        }, 500); // Thời gian tương ứng với transition của CSS
+    }, 2000);
+}
+
+</script>
+
+<style>
+.bookmarked {
+    color: red;
+}
+
+.notification {
+    position: fixed;
+    top: -50px;
+    right: 20px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: top 0.5s ease-in-out;
+}
+
+.notification.show {
+    top: 20px; /* Vị trí cuối cùng khi hiển thị */
+}
+
+</style>
+
 <style>
     .button_heart {
         background: none;

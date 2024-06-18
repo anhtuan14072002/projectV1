@@ -87,3 +87,20 @@ function lib2(){
     }
     return $list;
 }
+function card_calli(){
+    $sql = "select id, name from card_calligraphy ";
+    $result = query($sql);
+    $list = [];
+    while($row = $result->fetch_assoc()){
+        $list[] = $row;
+    }
+    return $list;
+}
+function product_detail($product_id)  {
+    $sql = "select * from card_calligraphy where id = $product_id";
+    $result = query($sql);
+    if($result->num_rows > 0){
+        return $result->fetch_assoc();
+    }
+    return null;
+}
