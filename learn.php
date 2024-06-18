@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/navbar2.css">
     <link rel="stylesheet" href="css/learn_calligraphy.css">
     <?php include_once("styles/styles.php")?>
-    <title>About</title>
+    <title>Learn</title>
 </head>
 <body>
     <div class="nav">

@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/navbar2.css">
     <?php include_once("styles/styles.php")?>
-    <title>Bookmarks</title>
+    <title>Bookmark</title>
 </head>
 <body>
     <div class="nav">
