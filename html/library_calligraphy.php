@@ -1,9 +1,12 @@
-<?php 
-    require_once("function/calligraphy.php");
-    $lib_calli = lib_calli();
+<?php
+session_start();
+require_once("function/calligraphy.php");
+$lib_calli = lib_calli();
 
-    require_once("function/search.php");
+require_once("function/search.php");
 
+
+$bookmarked = isset($_SESSION["bookmark"]) ? $_SESSION["bookmark"] : [];
 ?>
 <div class="library">
     <div class="articles_library">
@@ -25,20 +28,25 @@
         </div>
         <div class="card_all">
             <!-- lấy ảnh và description tại sql, ảnh bắt đầu bằng li -->
-            <?php foreach($lib_calli as $item):?>
-            <div class="card_library">
-                <div class="card">
-                    <img src="/images/<?php echo $item["thumbnail"];?>" height="250" width="298" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title" style="font-weight:800;"><?php echo $item["name"];?></h5>
-                        <p class="card-text"><?php echo $item["description"];?></p>
-                        <a href="<?php echo $item["link_card"];?>" class="btn btn-primary">Read More</a>
-                        <button class="button_heart"><i class="bi bi-bookmark"></i></button>
+            <?php foreach ($lib_calli as $item) : ?>
+                <div class="card_library">
+                    <div class="card">
+                        <form action="/add_to_bookmark.php" method="post">
+                            <input type="hidden" name="book_id" value="<?php echo $item["id"] ?>"/>
+                            <img src="/images/<?php echo $item["thumbnail"]; ?>" height="250" width="298" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title" style="font-weight:800;"><?php echo $item["name"]; ?></h5>
+                                <p class="card-text"><?php echo $item["description"]; ?></p>
+                                <a href="<?php echo $item["link_card"]; ?>" class="btn btn-primary">Read More</a>
+                                <button type="submit" class="button_heart <?php echo in_array($item["id"], $bookmarked) ? 'bookmarked' : ''; ?>">
+                                    <i class="bi bi-bookmark<?php echo in_array($item["id"], $bookmarked) ? '-fill' : ''; ?>"></i>
+                                </button>
+                            </div>
+                        </form>
                     </div>
                 </div>
-            </div>
-            <? endforeach;?>
-            
+            <? endforeach; ?>
+
         </div>
         <!-- <nav aria-label="Page navigation example">
             <ul class="pagination ttt">
@@ -61,46 +69,28 @@
     <div class="video_library">
         <h2>Video</h2>
         <h6>Learn Calligraphy in 5(ish) Minutes With Just a PENCIL!</h6>
-        <iframe class="video_hot" width="400" height="200"
-            src="https://www.youtube.com/embed/07ePW--MQY4?si=QJKieUgCWV30l3Fp" title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe class="video_hot" width="400" height="200" src="https://www.youtube.com/embed/07ePW--MQY4?si=QJKieUgCWV30l3Fp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         <h6>How To: Calligraphy & Hand Lettering for Beginners! Tutorial + Tips!</h6>
-        <iframe class="video_hot" width="400" height="200"
-            src="https://www.youtube.com/embed/sBoVGqiSzr4?si=pi53yYOnxKEQaOfD" title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe class="video_hot" width="400" height="200" src="https://www.youtube.com/embed/sBoVGqiSzr4?si=pi53yYOnxKEQaOfD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         <h6>How To: Calligraphy & Hand Lettering for Beginners! Tutorial + Tips!</h6>
-        <iframe class="video_hot" width="400" height="200"
-            src="https://www.youtube.com/embed/wUOPZmqWBS8?si=EBqqmF-ELvV443e4" title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe class="video_hot" width="400" height="200" src="https://www.youtube.com/embed/wUOPZmqWBS8?si=EBqqmF-ELvV443e4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         <h6>Alif Connections , Laam Alif (ﻻ) and Hay (ه) in Arabic Calligraphy | Urdu/Hindi</h6>
-        <iframe class="video_hot" width="400" height="200"
-            src="https://www.youtube.com/embed/ur4in9ibWiQ?si=G6pPY06xqZHMEpu3" title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe class="video_hot" width="400" height="200" src="https://www.youtube.com/embed/ur4in9ibWiQ?si=G6pPY06xqZHMEpu3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         <h6>Calligraphy Alphabets | Pencil Calligraphy for beginners | Lowercase Alphabets | Small Letters</h6>
-        <iframe class="video_hot" width="400" height="200"
-            src="https://www.youtube.com/embed/9fLR5qe6Fbw?si=BnE0hAeWD91MdVq0" title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe class="video_hot" width="400" height="200" src="https://www.youtube.com/embed/9fLR5qe6Fbw?si=BnE0hAeWD91MdVq0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         <h6>How to Gothic Calligraphy Capital and Small Letters From A to Z | Blackletters Calligraphy</h6>
-        <iframe class="video_hot" width="400" height="200"
-            src="https://www.youtube.com/embed/WF6BZQ8VQ-0?si=y0dMSz-TnPVgZL7q" title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe class="video_hot" width="400" height="200" src="https://www.youtube.com/embed/WF6BZQ8VQ-0?si=y0dMSz-TnPVgZL7q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         <h6>How To Write In Cursive Writing || Alphabets || Capital and Small Letters(A-Z) || How To Improve</h6>
-        <iframe class="video_hot" width="400" height="200"
-            src="https://www.youtube.com/embed/yC2mCPVyGAA?si=zMjsDMVXYu8KoofG" title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe class="video_hot" width="400" height="200" src="https://www.youtube.com/embed/yC2mCPVyGAA?si=zMjsDMVXYu8KoofG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
 </div>
+<style>
+    .button_heart {
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+    .button_heart.bookmarked i {
+        color: yellow;
+    }
+</style>
