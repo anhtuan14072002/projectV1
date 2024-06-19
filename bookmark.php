@@ -19,7 +19,7 @@ $list = get_book();
     <title>Bookmark</title>
     <link rel="stylesheet" href="css/navbar2.css">
     <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/library.css">
+    <link rel="stylesheet" href="css/bookmark.css">
     <?php include_once("styles/styles.php") ?>
 </head>
 
