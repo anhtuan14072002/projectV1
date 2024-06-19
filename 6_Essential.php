@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/detail_library.css">
     <?php include_once("styles/styles.php")?>
-    <title>About</title>
+    <title>6 Essential Calligraphy Tools For Beginners</title>
 </head>
 <body>
     <div class="nav">

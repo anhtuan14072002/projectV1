@@ -1,5 +1,5 @@
 <?php 
-session_start(); // Bắt đầu phiên
+session_start(); 
 function logout() {
     // die("fail");
     session_unset();

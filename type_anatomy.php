@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/detail_library.css">
     <?php include_once("styles/styles.php")?>
-    <title>About</title>
+    <title>Type Anatomy Understanding The Parts Of Letters</title>
 </head>
 <body>
     <div class="nav">
@@ -16,7 +16,7 @@
     <div class="container">
         <div class="calligraphy_101">
             <div class="calligraphy_101_1">
-                <h2></h2>
+                <h2>Type Anatomy Understanding The Parts Of Letters</h2>
                 <img src="images\type-anatomy.jpg" alt="">
                 <p>
                     <br>
