@@ -1,7 +1,13 @@
 <?php 
 require_once("function/calligraphy.php");
-$lib_calli = lib_calli();
-require_once("function/search.php");
+
+$search_results = [];
+if (isset($_GET['search']) && !empty($_GET['search'])) {
+    require_once("function/search.php");
+    $search_results = $list;
+}
+
+$lib_calli = !empty($search_results) ? $search_results : lib_calli();
 ?>
 <div class="library">
     <div class="articles_library">

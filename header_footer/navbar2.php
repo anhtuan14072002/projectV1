@@ -19,10 +19,12 @@ $card_calli = card_calli();
         </li>
         <li class="header_li"><a href="contact.php"><b>Contact</b></a></li>
         <li class="header_li">
+        <form action="library.php" method="GET">
             <div class="search-bar">
                 <i class="bi bi-search"></i>
-                <input class="search-bar-hh" type="text" placeholder="Search for assets">
+                <input value="<?php echo $search; ?>" name="search" class="search-bar-hh" type="text" placeholder="Search for assets">
             </div>
+            </form>
         </li>
       </ul>
       <ul>

@@ -7,26 +7,7 @@
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/detail_library.css">
     <?php include_once("styles/styles.php")?>
-    <title>About</title>
-</head>
-<body>
-    <div class="nav">
-        <?php include_once("header_footer/navbar2.php")?>
-    </div>
-    <div class="container">
-        <div class="calligraphy_101">
-            <div class="calligraphy_101_1">
-                <h2>Calligraphy 101 – The ULTIMATE Guide For Beginners</h2>
-                <img src="<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/navbar2.css">
-    <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/detail_library.css">
-    <?php include_once("styles/styles.php")?>
-    <title>About</title>
+    <title>The Basic Calligraphy Strokes Guide</title>
 </head>
 <body>
     <div class="nav">
@@ -287,22 +268,6 @@
                     <h3>Thank you for reading this! 😘</h3>
                     <img src="images\BasicCalligraphy33.jpg" alt="">
                 </ul>
-            </div>
-        </div>
-        <p></p>
-    </div>
-    <div class="footer">
-        <?php include_once("header_footer/footer.php")?>
-    </div>
-</body>
-</html>" alt="">
-                <p>
-                    <br>
-                <i>This post and the photos within it may contain affiliate links. If you purchase something through the link, I may receive a commission at no extra charge to you.</i>
-                </p>
-            </div>
-            <div class="calligraphy_101_2">
-                
             </div>
         </div>
         <p></p>

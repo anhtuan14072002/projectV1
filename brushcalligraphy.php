@@ -7,28 +7,12 @@
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/detail_library.css">
     <?php include_once("styles/styles.php")?>
-    <title>About</title>
+    <title>Brush Calligraphy Alphabet – a to z</title>
 </head>
 <body>
     <div class="nav">
         <?php include_once("header_footer/navbar2.php")?>
     </div>
-    <div class="container">
-        <div class="calligraphy_101">
-            <div class="calligraphy_101_1">
-                <h2>Calligraphy 101 – The ULTIMATE Guide For Beginners</h2>
-                <img src="<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/navbar2.css">
-    <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/detail_library.css">
-    <?php include_once("styles/styles.php")?>
-    <title>About</title>
-</head>
-<body>
     <div class="nav">
         <?php include_once("header_footer/navbar2.php")?>
     </div>
