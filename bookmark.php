@@ -54,36 +54,44 @@ $list = get_book();
     </div>
     <script>
         function toggleBookmark(button) {
-            const id = button.getAttribute('data-id');
-            const icon = button.querySelector('i');
+    const id = button.getAttribute('data-id');
+    const icon = button.querySelector('i');
 
-            fetch('add_bookmark.php', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/x-www-form-urlencoded',
-                    },
-                    body: `id=${id}&action=remove`, // Always remove from bookmarks in this context
-                })
-                .then(response => response.json())
-                .then(data => {
-                    if (data.success) {
-                        button.parentElement.parentElement.remove(); // Remove the card from UI
-                        showNotification('Removed from bookmarks');
-                    } else {
-                        if (data.message === 'User not logged in') {
-                            showNotification('Please log in to use this feature');
-                            setTimeout(() => {
-                                window.location.href = 'login.php';
-                            }, 2000); // Redirect after 2 seconds
-                        } else {
-                            alert('Failed to update bookmarks');
-                        }
-                    }
-                })
-                .catch(error => {
-                    console.error('Error toggling bookmark:', error);
-                });
-        }
+    fetch('add_bookmark.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+            },
+            body: `id=${id}&action=remove`, // Always remove from bookmarks in this context
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                // Remove from localStorage
+                const bookmarkedItems = JSON.parse(localStorage.getItem('bookmarkedItems')) || {};
+                delete bookmarkedItems[id];
+                localStorage.setItem('bookmarkedItems', JSON.stringify(bookmarkedItems));
+
+                // Update UI: Remove the card from UI or update the bookmarked class
+                button.parentElement.parentElement.remove(); // Remove the card from UI
+                showNotification('Removed from bookmarks');
+            } else {
+                if (data.message === 'User not logged in') {
+                    showNotification('Please log in to use this feature');
+                    setTimeout(() => {
+                        window.location.href = 'login.php';
+                    }, 2000); // Redirect after 2 seconds
+                } else {
+                    alert('Failed to update bookmarks');
+                }
+            }
+        })
+        .catch(error => {
+            console.error('Error toggling bookmark:', error);
+        });
+}
+
+
 
         function showNotification(message) {
             const notification = document.createElement('div');

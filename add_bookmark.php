@@ -22,4 +22,6 @@ if ($action === 'add') {
 
 $_SESSION["book"] = $book;
 
-echo json_encode(['success' => true, 'action' => $action]);
+$isBookmarked = in_array($id, $book);
+
+echo json_encode(['success' => true, 'action' => $action, 'bookmarked' => $isBookmarked]);

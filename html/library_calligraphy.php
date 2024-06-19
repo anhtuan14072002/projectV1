@@ -92,68 +92,88 @@ $lib_calli = !empty($search_results) ? $search_results : lib_calli();
 </div>
 <script>
     document.addEventListener('DOMContentLoaded', function() {
-        const bookmarkedItems = JSON.parse(localStorage.getItem('bookmarkedItems')) || {};
-        const buttons = document.querySelectorAll('.button_heart');
-        
-        buttons.forEach(button => {
-            const id = button.getAttribute('data-id');
-            if (bookmarkedItems[id]) {
-                button.classList.add('bookmarked');
-            }
-        });
-    });
-    function toggleBookmark(button) {
+    const buttons = document.querySelectorAll('.button_heart');
+
+    buttons.forEach(button => {
         const id = button.getAttribute('data-id');
-        const icon = button.querySelector('i');
-        const bookmarked = icon.classList.contains('bookmarked');
+        const bookmarkedItems = JSON.parse(localStorage.getItem('bookmarkedItems')) || {};
 
-        fetch('add_bookmark.php', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/x-www-form-urlencoded',
-                },
-                body: `id=${id}&action=${bookmarked ? 'remove' : 'add'}`,
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.success) {
-                    icon.classList.toggle('bookmarked');
-                    showNotification(data.action === 'add' ? 'Added to bookmarks' : 'Removed from bookmarks');
-                    
-                } else {
-                    if (data.message === 'User not logged in') {
-                        showNotification('Please log in to use this feature');
-                        // Redirect to login page
-                        setTimeout(() => {
-                            window.location.href = 'login.php';
-                        }, 2000); // Redirect after 2 seconds
-                    } else {
-                        alert('Failed to update bookmark');
-                    }
-                }
-            });
-    }
+        if (bookmarkedItems[id]) {
+            button.classList.add('bookmarked');
+            const icon = button.querySelector('i');
+            icon.classList.add('bi-bookmark-fill');
+            icon.classList.remove('bi-bookmark');
+        }
+    });
+});
 
-    function showNotification(message) {
-        const notification = document.createElement('div');
-        notification.className = 'notification';
-        notification.textContent = message;
-        document.body.appendChild(notification);
+function toggleBookmark(button) {
+    const id = button.getAttribute('data-id');
+    const icon = button.querySelector('i');
+    const bookmarked = icon.classList.contains('bookmarked');
 
-        // Thêm lớp "show" sau khi thêm phần tử vào DOM
+    fetch('add_bookmark.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: `id=${id}&action=${bookmarked ? 'remove' : 'add'}`,
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            icon.classList.toggle('bookmarked', data.bookmarked);
+            if (data.bookmarked) {
+                icon.classList.add('bi-bookmark-fill');
+                icon.classList.remove('bi-bookmark');
+            } else {
+                icon.classList.remove('bi-bookmark-fill');
+                icon.classList.add('bi-bookmark');
+            }
+            // Update localStorage to reflect current state
+            const bookmarkedItems = JSON.parse(localStorage.getItem('bookmarkedItems')) || {};
+            bookmarkedItems[id] = data.bookmarked;
+            localStorage.setItem('bookmarkedItems', JSON.stringify(bookmarkedItems));
+
+            showNotification(data.action === 'add' ? 'Added to bookmarks' : 'Removed from bookmarks');
+        } else {
+            if (data.message === 'User not logged in') {
+                showNotification('Please log in to use this feature');
+                setTimeout(() => {
+                    window.location.href = 'login.php';
+                }, 2000); // Redirect after 2 seconds
+            } else {
+                alert('Failed to update bookmark');
+            }
+        }
+    })
+    .catch(error => {
+        console.error('Error toggling bookmark:', error);
+    });
+}
+
+
+function showNotification(message) {
+    const notification = document.createElement('div');
+    notification.className = 'notification';
+    notification.textContent = message;
+    document.body.appendChild(notification);
+
+    // Thêm lớp "show" sau khi thêm phần tử vào DOM
+    setTimeout(() => {
+        notification.classList.add('show');
+    }, 10); // Delay nhỏ để kích hoạt CSS transition
+
+    // Xóa thông báo sau 2 giây
+    setTimeout(() => {
+        notification.classList.remove('show');
+        // Xóa phần tử khỏi DOM sau khi hoàn thành hiệu ứng trượt
         setTimeout(() => {
-            notification.classList.add('show');
-        }, 10); // Delay nhỏ để kích hoạt CSS transition
+            document.body.removeChild(notification);
+        }, 500); // Thời gian tương ứng với transition của CSS
+    }, 2000);
+}
 
-        // Xóa thông báo sau 2 giây
-        setTimeout(() => {
-            notification.classList.remove('show');
-            // Xóa phần tử khỏi DOM sau khi hoàn thành hiệu ứng trượt
-            setTimeout(() => {
-                document.body.removeChild(notification);
-            }, 500); // Thời gian tương ứng với transition của CSS
-        }, 2000);
-    }
 </script>
 
 <style>
@@ -178,4 +198,7 @@ $lib_calli = !empty($search_results) ? $search_results : lib_calli();
         top: 20px;
         /* Vị trí cuối cùng khi hiển thị */
     }
+    .bookmarked .bi-bookmark-fill {
+    color: red;
+}
 </style>
