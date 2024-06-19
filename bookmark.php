@@ -1,7 +1,14 @@
-<?php session_start();
-var_dump($_SESSION["bookmark"]);
-    require_once("function/bookmark.php");
-    $bookmarks = get_bookmarked();
+<?php
+session_start();
+require_once("function/bookmark.php");
+
+// Ensure user is logged in
+if (!isset($_SESSION['auth'])) {
+    header("Location: login.php");
+    exit;
+}
+
+$list = get_book();
 ?>
 <!DOCTYPE html>
 <html lang="en">
