@@ -91,6 +91,17 @@ $lib_calli = !empty($search_results) ? $search_results : lib_calli();
     </div>
 </div>
 <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const bookmarkedItems = JSON.parse(localStorage.getItem('bookmarkedItems')) || {};
+        const buttons = document.querySelectorAll('.button_heart');
+        
+        buttons.forEach(button => {
+            const id = button.getAttribute('data-id');
+            if (bookmarkedItems[id]) {
+                button.classList.add('bookmarked');
+            }
+        });
+    });
     function toggleBookmark(button) {
         const id = button.getAttribute('data-id');
         const icon = button.querySelector('i');
@@ -108,6 +119,7 @@ $lib_calli = !empty($search_results) ? $search_results : lib_calli();
                 if (data.success) {
                     icon.classList.toggle('bookmarked');
                     showNotification(data.action === 'add' ? 'Added to bookmarks' : 'Removed from bookmarks');
+                    
                 } else {
                     if (data.message === 'User not logged in') {
                         showNotification('Please log in to use this feature');
