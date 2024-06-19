@@ -1,5 +1,5 @@
 <?php session_start();
-var_dump($_SESSION["bookmark"]);
+    var_dump($_SESSION["bookmark"]);
     require_once("function/bookmark.php");
     $bookmarks = get_bookmarked();
 ?>

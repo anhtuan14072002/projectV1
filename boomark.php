@@ -22,7 +22,7 @@
                 <div class="card-body">
                     <h5 class="card-title" style="font-weight:800;"><?php echo $item["name"];?></h5>
                     <p class="card-text"><?php echo $item["description"];?></p>
-                    <a href="<?php echo $item["link_card"];?>" class="btn btn-primary">Đọc thêm</a>
+                    <a href="<?php echo $item["link_card"];?>" class="btn btn-primary">Read More</a>
                     <button class="button_heart" data-id="<?php echo $item["id"]; ?>" onclick="toggleBookmark(this)">
                         <i class="bi bi-bookmark bookmarked"></i>
                     </button>
