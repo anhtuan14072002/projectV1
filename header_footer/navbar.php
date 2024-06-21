@@ -22,7 +22,7 @@ $card_calli = card_calli();
         <ul>
             <li class="header_li"><a href="bookmark.php"><b>Bookmark</b></a></li>
             <?php if(isset($_SESSION['auth']) && $_SESSION['auth'] != null): ?>
-                <a class="p-2 ms-2" href="/profile.php"><?php echo $_SESSION['auth']['full_name']; ?></a>
+                <a class="p-2 ms-2" href="#"><?php echo $_SESSION['auth']['full_name']; ?></a>
                 <a class="p-2 ms-2" href="/logout.php">Logout</a>
             <?php else: ?>
                 <li class="header_li"><a href="login.php"><b>Log in</b></a></li>

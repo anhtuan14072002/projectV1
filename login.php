@@ -26,15 +26,26 @@ $_SESSION['auth'] = $user; // Set the user details in the session
             <div class="row">
                 <div class="col"></div>
                 <div class="col">
+                <?php if (isset($_SESSION['error'])): ?>
+                        <div class="alert alert-danger">
+                            <?php echo $_SESSION['error']; unset($_SESSION['error']); ?>
+                        </div>
+                    <?php endif; ?>
                 <form action="/login_user.php" method="post">
                     <div class="mb-3">
                         <label for="exampleInputEmail1" class="form-label">Email address</label>
                         <input name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                         <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                        <?php if (isset($_SESSION['email_error'])): ?>
+                                <div class="form-text text-danger"><?php echo $_SESSION['email_error']; unset($_SESSION['email_error']); ?></div>
+                            <?php endif; ?>
                     </div>
                     <div class="mb-3">
                         <label for="exampleInputPassword1" class="form-label">Password</label>
                         <input name="password" type="password" class="form-control" id="exampleInputPassword1">
+                        <?php if (isset($_SESSION['password_error'])): ?>
+                                <div class="form-text text-danger"><?php echo $_SESSION['password_error']; unset($_SESSION['password_error']); ?></div>
+                            <?php endif; ?>
                     </div>
                 
                     <button type="submit" class="btn btn-primary">Submit</button>

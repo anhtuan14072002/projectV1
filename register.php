@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="css/navbar2.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/login.css">
-
     <?php include_once("styles/styles.php") ?>
 </head>
 
@@ -22,21 +21,34 @@
             <div class="row">
                 <div class="col"></div>
                 <div class="col">
+                    <?php if (isset($_SESSION['error'])): ?>
+                        <div class="alert alert-danger">
+                            <?php echo $_SESSION['error']; unset($_SESSION['error']); ?>
+                        </div>
+                    <?php endif; ?>
                     <form action="/create_user.php" method="post">
                         <div class="mb-3">
                             <label for="exampleInputEmail2" class="form-label">Full name</label>
-                            <input name="full_name" type="text" class="form-control" id="exampleInputEmail2" aria-describedby="emailHelp">
+                            <input name="full_name" type="text" class="form-control" id="exampleInputEmail2" aria-describedby="emailHelp" required>
+                            <?php if (isset($_SESSION['full_name_error'])): ?>
+                                <div class="form-text text-danger"><?php echo $_SESSION['full_name_error']; unset($_SESSION['full_name_error']); ?></div>
+                            <?php endif; ?>
                         </div>
                         <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label">Email address</label>
-                            <input name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                            <input name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
                             <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                            <?php if (isset($_SESSION['email_error'])): ?>
+                                <div class="form-text text-danger"><?php echo $_SESSION['email_error']; unset($_SESSION['email_error']); ?></div>
+                            <?php endif; ?>
                         </div>
                         <div class="mb-3">
                             <label for="exampleInputPassword1" class="form-label">Password</label>
-                            <input name="password" type="password" class="form-control" id="exampleInputPassword1">
+                            <input name="password" type="password" class="form-control" id="exampleInputPassword1" required>
+                            <?php if (isset($_SESSION['password_error'])): ?>
+                                <div class="form-text text-danger"><?php echo $_SESSION['password_error']; unset($_SESSION['password_error']); ?></div>
+                            <?php endif; ?>
                         </div>
-
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </form>
                 </div>
