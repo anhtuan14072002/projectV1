@@ -39,10 +39,6 @@
             <h6>MAP</h6>
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.096608933641!2d105.78229669999999!3d21.0288201!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab00954decbf%3A0xdb4ee23b49ad50c8!2zRlBUIEFwdGVjaCBIw6AgTuG7mWkgLSBI4buHIHRo4buRbmcgxJHDoG8gdOG6oW8gbOG6rXAgdHLDrG5oIHZpw6puIHF14buRYyB04bq_!5e0!3m2!1svi!2s!4v1716892275356!5m2!1svi!2s" width="250" height="150" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
-        <div class="sign_footer">
-            <p>Get exclusive assets sent straight to your inbox</p>
-            <button class="btn btn-primary">Sign up</button>
-        </div>
     </div>
     </div>
     <div class="end_footer">
